@@ -1,0 +1,64 @@
+// SM
+@media (max-width: 576px) {
+  .card-services {
+    padding: 50px !important;
+  }
+
+  .svg-icon {
+    width: 17px !important;
+    height: 17px !important;
+  }
+}
+
+// MD
+@media (max-width: 768px) {
+  .card-services {
+    padding: 30px !important;
+  }
+
+  .svg-icon {
+    width: 14px !important;
+    height: 14px !important;
+  }
+
+  .project-content {
+    padding: 25px !important;
+
+    p {
+      font-size: 18px !important;
+    }
+  }
+
+  .project-footer {
+    padding: 12px !important;
+  }
+
+  .impact-section,
+  .stat-item {
+    width: 100% !important;
+  }
+}
+
+// LG
+@media (max-width: 992px) {
+  
+}
+
+// XL
+@media (max-width: 1200px) {
+  .card-services {
+    padding: 40px !important;
+  }
+
+  .project-content {
+    padding: 28px !important;
+  }
+
+  .project-footer {
+    padding: 16px !important;
+  }
+}
+
+// XXL
+@media (max-width: 1400px) {
+}

@@ -1,0 +1,146 @@
+@use "../abstracts/variables" as *;
+@use "../layout/header" as *;
+@use "../abstracts/mixins" as *;
+
+.hero-wrapper-events {
+  background: url("../img/events-hero.svg") no-repeat center center !important;
+  background-size: cover !important;
+
+
+}
+
+.hero-events {
+  position: relative;
+  //background: url("../img/events-hero.svg") no-repeat right center !important;
+  min-height: 100vh;
+  background-size: contain;
+  overflow-x: hidden;
+  background-size: 100% auto !important;
+
+  @include respond(xl){
+      min-height: 58vh;
+    }
+
+ 
+  
+
+  .hero-title {
+    font-size: clamp(2.5rem, 6vw, 5.5rem);
+    font-weight: 900;
+    line-height: 1.2;
+    color: $white;
+  }
+
+  .hero-subtext {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    font-weight: 300;
+    line-height: 1.6;
+    //max-width: 850px;
+    color: $white;
+  }
+
+  
+  
+}
+
+
+.moments-section {
+  background-color: $black;
+
+  .section-title {
+    color: $white;
+    font-size: clamp(30px, 5vw, 38px);
+    font-weight: 600;
+
+    .highlight {
+      color: $orange;
+    }
+  }
+
+  .year-btn {
+    background-color: transparent;
+    color: $white;
+    border: 1px solid $white;
+    border-radius: 50px;
+    padding: 8px 20px;
+    margin-right: 10px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+
+    &.active,
+    &:hover {
+      background-color: $orange;
+      color: $white;
+      border-color: $orange;
+    }
+  }
+
+  .event-card {
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: $white;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    .event-img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+    }
+
+    .event-footer {
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: $white;
+      font-size: 20px;
+      font-weight: 500;
+
+      .arrow-icon {
+        width: 18px;
+        height: 18px;
+      }
+    }
+
+    &.bg-indigo .event-footer {
+      background-color: $deep-indigo;
+    }
+
+    &.bg-soft-blue .event-footer {
+      background-color: $soft-blue;
+    }
+
+    &.bg-steel-blue .event-footer {
+      background-color: $steel-blue;
+    }
+
+    &.bg-royal-purple .event-footer {
+      background-color: $royal-purple;
+    }
+
+    &.bg-earth-brown .event-footer {
+      background-color: $earth-brown;
+    }
+
+    &.bg-brick-red .event-footer {
+      background-color: $brick-red;
+    }
+
+    &.bg-cocoa-brown .event-footer {
+      background-color: $cocoa-brown;
+    }
+
+    &.bg-crimson-maroon .event-footer {
+      background-color: $crimson-maroon;
+    }
+    
+
+    
+
+    i {
+      font-size: 1rem;
+    }
+  }
+}

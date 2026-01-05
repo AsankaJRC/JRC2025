@@ -1,0 +1,260 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+#services {
+  .hero-services {
+    position: relative;
+    background-color: $black !important;
+    min-height: 100vh;
+    background-size: contain;
+    overflow-x: hidden;
+
+    @include respond(xl){
+      min-height: 58vh;
+    }
+
+    
+
+
+    .hero-title {
+      font-size: clamp(2.5rem, 6vw, 5.5rem);
+      font-weight: 900;
+      line-height: 1.2;
+      color: $white;
+    }
+
+    .hero-subtext {
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      font-weight: 300;
+      line-height: 1.6;
+      //max-width: 850px;
+      color: $white;
+    }
+  }
+
+  .ai-solutions-section {
+    overflow: hidden;
+    background-color: $black-grey !important;
+
+  .section-title {
+ 
+  font-weight: 600;
+  color: $white;
+
+  .highlight {
+    color: $orange;
+  }
+}
+
+.section-description {
+  color: $white;
+  font-weight: 100;
+  font-size: clamp(14px, 2vw, 19px);
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+.info-icon {
+  width: 48px;
+  height: 48px;
+
+  color: $white;
+
+  svg {
+    width: 100%;
+    height: 100%;
+    fill: currentColor;
+    transition: 0.3s ease;
+  }
+  h5 {
+    font-weight: 600;
+    font-size: clamp(16px, 3vw, 22px);
+    margin-bottom: 20px;
+    margin-top: 15px;
+  }
+
+  p {
+    font-size: clamp(16px, 3vw, 22px);
+    color: $white;
+    font-weight: 100;
+    margin: 0;
+  }
+
+  .card-description {
+    font-size: clamp(16px, 3vw, 22px);
+  }
+}
+  }
+
+   .software-section {
+    overflow: hidden;
+    background-color: $black-grey !important;
+
+  .section-title {
+ 
+  font-weight: 600;
+  color: $white;
+
+  .highlight {
+    color: $orange;
+  }
+}
+
+.section-description {
+  color: $white;
+  font-weight: 100;
+  font-size: clamp(14px, 2vw, 19px);
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+.info-icon {
+  width: 48px;
+  height: 48px;
+
+  color: $white;
+
+  svg {
+    width: 100%;
+    height: 100%;
+    fill: currentColor;
+    transition: 0.3s ease;
+  }
+  h5 {
+    font-weight: 600;
+    font-size: clamp(16px, 3vw, 22px);
+    margin-bottom: 20px;
+    margin-top: 15px;
+  }
+
+  p {
+    font-size: clamp(16px, 3vw, 22px);
+    color: $white;
+    font-weight: 100;
+    margin: 0;
+  }
+
+  .card-description {
+    font-size: clamp(16px, 3vw, 22px);
+  }
+}
+  }
+
+  
+
+  .product-section {
+    overflow: hidden;
+    background-color: $black-grey !important;
+
+  .section-title {
+ 
+  font-weight: 600;
+  color: $white;
+
+  .highlight {
+    color: $orange;
+  }
+}
+
+.section-description {
+  color: $white;
+  font-weight: 100;
+  font-size: clamp(14px, 2vw, 19px);
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+.info-icon {
+  width: 48px;
+  height: 48px;
+
+  color: $white;
+
+  svg {
+    width: 100%;
+    height: 100%;
+    fill: currentColor;
+    transition: 0.3s ease;
+  }
+  h5 {
+    font-weight: 600;
+    font-size: clamp(16px, 3vw, 22px);
+    margin-bottom: 20px;
+    margin-top: 15px;
+  }
+
+  p {
+    font-size: clamp(16px, 3vw, 22px);
+    color: $white;
+    font-weight: 100;
+    margin: 0;
+  }
+
+  .card-description {
+    font-size: clamp(16px, 3vw, 22px);
+  }
+}
+  }
+
+  
+  }
+
+  .content-wrapper {
+    position: relative;
+    z-index: 2;
+  }
+
+
+
+  .cta-section {
+    background-color: $black;
+    min-height: 400px;
+    padding: 160px 20px 160px 20px;
+    
+
+    
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .cta-heading {
+      font-size: 54px;
+      font-weight: 800;
+      color: $white;
+      line-height: 1.4;
+
+      letter-spacing: 0.5px;
+
+      .highlight {
+        color: $orange;
+      }
+
+      br {
+        display: block;
+      }
+    }
+
+    .contact {
+      border: 1px solid $white;
+      color: $white;
+      padding: 8px 24px !important;
+      border-radius: 1000px !important;
+      margin-top: 30px;
+    }
+
+    
+  }
+
+  .cta-section.cta-services{
+      
+      @include respond(xxl){
+        padding: 160px 20px 40px 20px;
+
+      }
+      
+    }
+

@@ -1,0 +1,144 @@
+@use "../abstracts/variables" as *;
+@use "../layout/header" as *;
+@use "../abstracts/mixins" as *;
+
+.hero-contact {
+  position: relative;
+  background: url("../img/contact-us.svg") no-repeat right center !important;
+  min-height: 100vh;
+  background-size: contain;
+  overflow-x: hidden;
+
+  .hero-title {
+    font-size: clamp(2.5rem, 6vw, 5.5rem);
+    font-weight: 900;
+    line-height: 1.2;
+    color: $white;
+  }
+
+  .hero-subtext {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    font-weight: 300;
+    line-height: 1.6;
+    //max-width: 850px;
+    color: $white;
+  }
+}
+
+.office-section {
+  background-color: $black;
+
+  .office-card {
+    background-color: $dark-ash;
+    border-radius: 15px;
+    color: $white;
+    padding: 80px;
+  }
+
+  .office-title {
+    font-size: clamp(14px, 3vw, 24px);
+    font-weight: 600;
+    margin-bottom: 70px;
+  }
+
+  .office-item {
+    gap: 50px;
+    margin-bottom: 70px;
+
+    .office-icon {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $white;
+      font-size: 18px;
+      margin-top: 2px;
+    }
+
+    .bg-purple {
+      background-color: #6f42c1;
+    }
+
+    .bg-indigo {
+      background-color: #7b4af2;
+    }
+
+    .bg-blue {
+      background-color: #377dff;
+    }
+
+    .office-info {
+      .info {
+        display: block;
+        font-weight: 600;
+        margin-bottom: 5px;
+        font-size: 18px;
+      }
+
+      p {
+        margin: 0;
+        color: $white;
+        font-size: 16px;
+      }
+    }
+  }
+}
+.office-card {
+  padding: 60px;
+}
+
+.svg-icon {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+
+.social-network-section {
+  .section-subtitle {
+    font-weight: 600;
+    color: $white;
+    font-size: 24px;
+  }
+
+  .social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    margin-top: 20px;
+
+    img {
+      width: 22px;
+      height: 22px;
+    }
+
+    &.linkedin {
+      background-color: $orange-red;
+    }
+
+    &.instagram {
+      background-color: $bright-red;
+    }
+
+    &.facebook {
+      background-color: $brown;
+    }
+  }
+}
+
+.contact-section {
+  color: $white;
+  .section-title {
+    font-size: clamp(30px, 5vw, 38px);
+    font-weight: 600;
+
+    .highlight {
+      color: $orange;
+    }
+  }
+}

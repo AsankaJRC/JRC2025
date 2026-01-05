@@ -1,0 +1,245 @@
+@use "../abstracts/variables" as *;
+@use "../layout/header" as *;
+@use "../abstracts/mixins" as *;
+
+.hero-wrapper-vacancies {
+  background: url("../img/careers-hero.svg") no-repeat center center !important;
+  background-size: cover !important;
+}
+
+
+
+.hero-careers {
+  position: relative;
+  //background: url("../img/careers-hero.svg") no-repeat right center !important;
+  min-height: 100vh;
+  background-size: contain;
+  overflow-x: hidden;
+  background-size: 100% auto !important;
+
+  @include respond(xl){
+      min-height: 80vh;
+    }
+
+  .hero-title {
+    font-size: clamp(2.5rem, 6vw, 5.5rem);
+    font-weight: 900;
+    line-height: 1.2;
+    color: $white;
+  }
+
+  .hero-subtext {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    font-weight: 300;
+    line-height: 1.6;
+    //max-width: 850px;
+    color: $white;
+  }
+}
+
+.open-positions-section {
+  background-color: $dark-ash;
+
+  .section-title {
+    font-weight: 600;
+    font-size: clamp(34px, 6vw, 45px);
+    line-height: 1.2;
+
+    .highlight {
+      color: $orange;
+    }
+  }
+
+  .position-list {
+    li {
+      color: $white;
+      font-size: clamp(16px, 3vw, 22px) !important;
+      //border-color: $light-grey;
+      font-weight: 200;
+      padding-top: 60px !important;
+      padding-bottom: 60px !important;
+      border-top: 0.8px solid rgba($white, 0.2) !important;
+
+      .apply-link {
+        color: $orange;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+
+         @include respond(xxl) {
+         margin-left: 100px; // or try 150px or use calc() for precision
+  }
+
+        .arrow-icon {
+          width: 16px;
+          height: 16px;
+        }
+      }
+    }
+  }
+}
+
+.interview-process-section {
+  background-color: $black;
+
+  .section-title {
+    font-size: clamp(30px, 5vw, 38px);
+    color: $white;
+    font-weight: 600;
+
+    .highlight {
+      color: $orange;
+    }
+  }
+
+  .process-step {
+    .step-number {
+      font-size: clamp(30px, 5vw, 42px);
+      font-weight: 600;
+      color: $white;
+    }
+
+    .divider {
+      width: 100%;
+      height: 1px;
+      background-color: rgba($white, 0.3);
+      margin: 1rem 0;
+      margin-top: 50px !important;
+    }
+
+    .step-title {
+      font-size: clamp(30px, 5vw, 30px);
+      font-weight: 600;
+      color: $white;
+      margin-top: 60px !important;
+    }
+
+    .step-desc {
+      font-size: clamp(14px, 2vw, 19px);
+      color: $white;
+      margin-top: 60px !important;
+      
+    }
+  }
+}
+
+.cta-section-careers {
+  background-color: $black;
+  min-height: 400px;
+  padding: 160px 20px 160px 20px;
+  background: url("../img/about-us-hero.svg") no-repeat center center !important;
+  background-size: cover !important;
+  margin-top: 100px !important;
+
+
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .cta-heading-careers {
+    font-size: clamp(40px, 6vw, 54px);
+    font-weight: 800;
+    color: $white;
+    line-height: 1.4;
+
+    letter-spacing: 0.5px;
+
+    .highlight {
+      color: $orange;
+    }
+
+    br {
+      display: block;
+    }
+     @include respond(sm) {
+        
+        font-size: 20px;
+      }
+     @include respond(xl) {
+        
+        font-size: 30px;
+      }
+  }
+  .cta-cv-careers
+  {
+    font-size: clamp(20px, 6vw, 30px);
+    font-weight: 800;
+    color: $white;
+    line-height: 1.4;
+    margin-top: 10px;
+    letter-spacing: 0.6px;
+
+    .highlight {
+      color: $orange;
+    }
+
+    br {
+      display: block;
+    }
+     @include respond(xl) {
+        
+        font-size: 16px;
+      }
+  }
+
+  .contact {
+    border: 1px solid $white;
+    color: $white;
+    padding: 8px 24px !important;
+    border-radius: 1000px !important;
+    margin-top: 30px;
+  }
+}
+
+#vacancies {
+  .vacancy-header {
+    @include respond(lg) {
+      flex-direction: column;
+    }
+
+    span {
+      width: 75%;
+
+      @include respond(lg) {
+        width: 100%;
+        
+        
+      }
+       @include respond(xl) {
+        
+        padding-left: 0px;
+      }
+      @include respond(sm) {
+        
+        padding-left: 0px;
+        display: flex;
+      }
+
+      
+    }
+
+    .apply-link {
+      width: 25%;
+      justify-content: end;
+      margin-left: 0px;
+      @include respond(lg) {
+        width: 100%;
+        justify-content: start;
+        padding-left: 0px;
+        
+      }
+      @include respond(sm) {
+        width: 100%;
+        justify-content: start;
+        padding-left: 0px;
+        display: flex;
+        
+      }
+     
+    }
+  }
+}

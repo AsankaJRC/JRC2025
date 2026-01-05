@@ -1,0 +1,39 @@
+// src/scss/main.scss
+
+// 1. Abstracts
+@use "abstracts/variables";
+@use "abstracts/mixins";
+
+// 2. Base
+@use "base/reset";
+@use "base/typography";
+@use "base/responsive";
+
+// 3. Layout
+@use "layout/header";
+@use "layout/footer";
+
+// 4. Components
+@use "components/cards";
+
+// 5. Pages
+
+@use "pages/home";
+@use "pages/services";
+@use "pages/about-us";
+@use "pages/events";
+@use "pages/careers";
+@use "pages/contact";
+
+body {
+  font-family: "Manrope", sans-serif !important;
+}
+
+body {
+  opacity: 1;
+  transition: opacity 0.4s ease-in-out;
+
+  &.fade-out {
+    opacity: 0;
+  }
+}

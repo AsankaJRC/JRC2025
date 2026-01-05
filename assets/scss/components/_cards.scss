@@ -1,0 +1,138 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.info-card {
+  background-color: $dark-grey;
+  padding: 60px;
+  border-radius: 16px;
+  border-color: none;
+  color: $white;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .info-icon {
+    width: 48px;
+    height: 48px;
+    color: $white;
+
+    svg {
+      width: 100%;
+      height: 100%;
+      fill: currentColor;
+      transition: 0.3s ease;
+    }
+  }
+
+  h5 {
+    font-weight: 600;
+    font-size: 22px;
+    margin-bottom: 20px;
+    margin-top: 15px;
+  }
+
+  p {
+    font-size: 18px;
+    color: $white;
+    font-weight: 100;
+    margin: 0;
+  }
+
+  &.bg-indigo {
+    background-color: $deep-indigo;
+  }
+  &.bg-soft-blue {
+    background-color: $soft-blue;
+  }
+  &.bg-steel-blue {
+    background-color: $steel-blue;
+  }
+  &.bg-royal-purple {
+    background-color: $royal-purple;
+  }
+
+  &.bg-deep-violet {
+    background-color: $deep-violet;
+  }
+  &.bg-lavender-indigo {
+    background-color: $lavender-indigo;
+  }
+  &.bg-grape-purple {
+    background-color: $grape-purple;
+  }
+  &.bg-eggplant-purple {
+    background-color: $eggplant-purple;
+  }
+
+  &.bg-earth-brown {
+    background-color: $earth-brown;
+  }
+  &.bg-brick-red {
+    background-color: $brick-red;
+  }
+  &.bg-cocoa-brown {
+    background-color: $cocoa-brown;
+  }
+  &.bg-crimson-maroon {
+    background-color: $crimson-maroon;
+  }
+
+  @include respond(sm) {
+    margin: 0rem 3rem;
+  }
+}
+
+.project-card {
+  border-radius: 30px;
+  height: auto;
+  overflow: hidden;
+  background-color: $purple-blue;
+
+  &.bg-purple {
+    background-color: $purple-blue;
+  }
+
+  &.bg-blue {
+    background-color: $blue;
+  }
+
+  &.bg-dark-purple {
+    background-color: $dark-blue;
+  }
+
+  .project-content {
+    background-color: $black;
+    padding: 45px;
+    border-radius: 30px;
+    border: 1px solid rgba($white, 0.1);
+    flex-grow: 1;
+
+    p {
+      color: $white;
+      font-size: clamp(18px, 6vw, 18px);
+      font-weight: 300;
+      line-height: 1.6;
+      margin: 0;
+    }
+  }
+
+  .project-footer {
+    padding: 20px 0;
+
+    img {
+      height: 36px;
+      width: auto;
+
+      @include respond(md) {
+        height: 30px;
+        width: auto;
+      }
+    }
+  }
+
+  @include respond(sm) {
+    margin: 0rem 3rem;
+  }
+}
