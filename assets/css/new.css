@@ -287,6 +287,33 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
   inset: 0;
   overflow: hidden;
+
+  /* ✅ HERO BACKGROUND IMAGE */
+  background-image: url("../img/hero.svg");
+  background-size: contain;        
+  background-position: center;   
+  background-repeat: no-repeat;
+
+  /* Optional: slightly dim the image */
+  filter: grayscale(100%) brightness(0.45);
+
+  z-index: 0;
+}
+
+.hero-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  /* Dark overlay */
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.85) 0%,
+    rgba(0, 0, 0, 0.65) 45%,
+    rgba(0, 0, 0, 0.4) 100%
+  );
+
+  z-index: 1;
 }
 
 .hero-shape {
@@ -336,7 +363,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero .container{
-    margin: 0 auto 0 120px;
+    margin: 0 auto 0 120px !important;
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: 0 1.5rem;
 }
 
 .hero-title {
@@ -1428,7 +1458,7 @@ h1, h2, h3, h4, h5, h6 {
 /* =====================================================
    FOOTER
    ===================================================== */
-.footer {
+/* .footer {
   background: var(--background);
   border-top: 1px solid var(--border);
   padding: 4rem 0;
@@ -1641,4 +1671,271 @@ h1, h2, h3, h4, h5, h6 {
   .award-item {
     justify-content: flex-end;
   }
-}
+} */
+
+.footer {
+      width: 100%;
+      background: #0a0a0a;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .footer-main {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 500px;
+    }
+
+    /* Left Panel */
+    .footer-left {
+      padding: 60px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin: 0 auto 0 85px;
+    }
+
+    .footer-logo {
+      font-size: 12px;
+      font-weight: 300;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      opacity: 0.6;
+    }
+
+    .footer-logo span {
+      font-weight: 500;
+    }
+
+    .footer-headline {
+      margin: 40px 0;
+    }
+
+    .footer-headline h2 {
+      font-size: 48px;
+      font-weight: 600;
+      line-height: 1.15;
+      margin-bottom: 50px;
+    }
+
+    .footer-headline p {
+      font-size: 15px;
+      color: rgba(255, 255, 255, 0.6);
+      max-width: 320px;
+      line-height: 1.7;
+    }
+
+    .footer-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      color: #f97316;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      margin-top: 24px;
+      transition: gap 0.3s ease;
+    }
+
+    .footer-cta:hover {
+      gap: 18px;
+    }
+
+    .footer-cta svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    .footer-bottom-left {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 12px;
+    }
+
+    .social-links a {
+      width: 40px;
+      height: 40px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+    }
+
+    .social-links a:hover {
+      background: #f97316;
+    }
+
+    .social-links svg {
+      width: 16px;
+      height: 16px;
+      fill: rgba(255, 255, 255, 0.8);
+    }
+
+    .award-badge {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .award-badge svg {
+      width: 24px;
+      height: 24px;
+      color: #f97316;
+    }
+
+    .award-badge span {
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    /* Right Panel */
+    .footer-right {
+      padding: 60px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border-left: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .footer-links {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 50px;
+    }
+
+    .footer-column h4 {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: rgba(255, 255, 255, 0.4);
+      margin-bottom: 24px;
+    }
+
+    .footer-column ul {
+      list-style: none;
+    }
+
+    .footer-column li {
+      margin-bottom: 14px;
+    }
+
+    .footer-column a {
+      color: rgba(255, 255, 255, 0.8);
+      text-decoration: none;
+      font-size: 14px;
+      transition: all 0.2s ease;
+      display: inline-block;
+    }
+
+    .footer-column a:hover {
+      color: #f97316;
+      transform: translateX(4px);
+    }
+
+    /* Offices */
+    .footer-offices {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+      padding-top: 40px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .office h5 {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #f97316;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .office h5 svg {
+      width: 14px;
+      height: 14px;
+    }
+
+    .office p {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.5);
+      line-height: 1.8;
+    }
+
+    .office a {
+      color: rgba(255, 255, 255, 0.7);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .office a:hover {
+      color: #f97316;
+    }
+
+    /* Copyright Bar */
+    .footer-copyright {
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 20px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer-copyright p {
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.4);
+    }
+
+    .footer-copyright a {
+      color: rgba(255, 255, 255, 0.4);
+      text-decoration: none;
+      margin-left: 20px;
+      transition: color 0.2s ease;
+    }
+
+    .footer-copyright a:hover {
+      color: #ffffff;
+    }
+
+    @media (max-width: 1024px) {
+      .footer-main {
+        grid-template-columns: 1fr;
+      }
+      .footer-right {
+        border-left: none;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .footer-left, .footer-right {
+        padding: 40px 24px;
+      }
+      .footer-headline h2 {
+        font-size: 32px;
+      }
+      .footer-links, .footer-offices {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+      .footer-bottom-left {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+      }
+      .footer-copyright {
+        flex-direction: column;
+        gap: 10px;
+        padding: 20px 24px;
+      }
+    }
