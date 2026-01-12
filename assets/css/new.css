@@ -276,8 +276,8 @@ h1, h2, h3, h4, h5, h6 {
 .hero {
   position: relative;
   min-height: 100vh;
-  display: flex;
-  align-items: center;
+  /* display: flex;
+  align-items: center; */
   justify-content: center;
   padding-top: 4rem;
   overflow: hidden;
@@ -359,14 +359,15 @@ h1, h2, h3, h4, h5, h6 {
 .hero-content {
   position: relative;
   z-index: 10;
-  max-width: 56rem;
+  margin-top: 80px;
+  /* max-width: 56rem; */
 }
 
 .hero .container{
-    margin: 0 auto 0 120px !important;
+    /* margin: 0 auto 0 120px !important;
     max-width: var(--container-max);
     margin: 0 auto;
-    padding: 0 1.5rem;
+    padding: 0 1.5rem; */
 }
 
 .hero-title {
@@ -378,8 +379,17 @@ h1, h2, h3, h4, h5, h6 {
 .hero-subtitle {
   font-size: 1.125rem;
   color: var(--muted-foreground);
-  max-width: 42rem;
+  /* max-width: 42rem; */
   margin-bottom: 2.5rem;
+  
+}
+
+.hero-sub-title{
+  font-size: 1.125rem;
+  color: var(--foreground);
+  /* max-width: 42rem; */
+  margin-bottom: 2.5rem;
+  font-weight: 500;
 }
 
 .hero-buttons {
