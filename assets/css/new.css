@@ -425,10 +425,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .logo-cloud-label {
-  font-size: 1.5rem;
-  color: var(--muted-foreground);
-  margin-bottom: 2.5rem;
-  font-weight: 600;
+font-size: 12px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 1.25rem;
 }
 
 /* FULL WIDTH DISTRIBUTION */
@@ -937,6 +938,32 @@ h1, h2, h3, h4, h5, h6 {
   gap: 1rem;
   padding: 1.25rem;
   border-radius: var(--border-radius);
+}
+.reason-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+/* Wrap text nicely */
+.reason-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+/* Title (existing span) */
+.reason-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--foreground);
+}
+
+/* New description */
+.reason-desc {
+  font-size: 0.825rem;
+  line-height: 1.6;
+  color: var(--muted-foreground);
 }
 
 .reason-check {
