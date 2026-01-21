@@ -3427,7 +3427,7 @@ font-size: 12px;
   align-items: center;
   justify-content: center;
   color: var(--primary-foreground);
-  box-shadow: 0 4px 20px hsla(24, 100%, 50%, 0.3);
+  /* box-shadow: 0 4px 20px hsla(24, 100%, 50%, 0.3); */
 }
 
 .icon-gradient-sm {
