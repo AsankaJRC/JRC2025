@@ -6,7 +6,7 @@
 /* CSS Variables */
 :root {
   /* Colors */
-  --background: hsl(0, 0%, 4%);
+  --background: hsl(0, 0%, 3%);
   --foreground: hsl(0, 0%, 98%);
   --card: hsl(0, 0%, 7%);
   --card-foreground: hsl(0, 0%, 98%);
@@ -306,7 +306,7 @@ h1, h2, h3, h4, h5, h6 {
   background-repeat: no-repeat;
 
   /* Optional: slightly dim the image */
-  filter: grayscale(100%) brightness(0.45);
+  filter: grayscale(100%) brightness(0.4); 
 
   z-index: 0;
 }
@@ -317,12 +317,12 @@ h1, h2, h3, h4, h5, h6 {
   inset: 0;
 
   /* Dark overlay */
-  background: linear-gradient(
+  /* background: linear-gradient(
     to right,
     rgba(0, 0, 0, 0.85) 0%,
     rgba(0, 0, 0, 0.65) 45%,
     rgba(0, 0, 0, 0.4) 100%
-  );
+  ); */
 
   z-index: 1;
 }
@@ -362,9 +362,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero-glow {
-  position: absolute;
+ position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at center, hsla(24, 100%, 50%, 0.05) 0%, transparent 60%);
+  background: radial-gradient(ellipse at center, hsla(24, 100%, 50%, 0.08) 0%, transparent 60%);
 }
 
 .hero-content {
@@ -579,8 +579,8 @@ font-size: 12px;
   z-index: 2;
 }
 .about-image {
-  filter: grayscale(100%) brightness(0.5) contrast(1.05);
-  transition: filter 0.3s ease;
+  filter: grayscale(100%) brightness(0.7) contrast(1.05);
+  transition: filter 0.4s ease;
 }
 
 .visual-container {
@@ -744,6 +744,34 @@ font-size: 12px;
   color: var(--foreground);
   font-size: 1.2rem;
   font-weight: 400;
+}
+
+/* Service Results */
+.service-results {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid hsla(0, 0%, 100%, 0.08);
+}
+
+.service-result {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8125rem;
+  color: hsla(24, 100%, 60%, 0.9);
+}
+
+.service-result-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+}
+
+.service-result-icon svg {
+  display: block;
 }
 
 /* Ensure button stays left aligned */
@@ -2930,7 +2958,7 @@ font-size: 12px;
   );
 
   z-index: 1;
-}
+} 
 
 .hero-contact-bg {
   background-size: 50%;
@@ -3055,7 +3083,7 @@ font-size: 12px;
 }
 
 /* Dark overlay for readability */
-.hero-about-bg::after {
+/* .hero-about-bg::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -3068,7 +3096,7 @@ font-size: 12px;
   );
 
   z-index: 1;
-}
+} */
 
 
 
@@ -7568,7 +7596,7 @@ font-size: 12px;
 }
 
 .hero-text-v3 p {
-  font-size: 1.125rem;
+  font-size: 1rem;
   color: hsla(0, 0%, 100%, 0.7);
   line-height: 1.7;
   margin-bottom: 2rem;
@@ -8222,4 +8250,47 @@ font-size: 12px;
 .contact-value {
   font-size: 0.9375rem;
   color: var(--text-secondary);
+}
+
+/* Outcomes */
+.outcomes-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid hsla(0, 0%, 100%, 0.08);
+}
+
+/* NEW name instead of .outcome-item */
+.service-result {
+  font-size: 0.8125rem;
+  color: hsla(24, 100%, 60%, 0.9);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+/* Check Icon */
+.service-result svg {
+  width: 14px;
+  height: 14px;
+  stroke: var(--primary);
+  fill: none;
+  stroke-width: 3;
+  flex-shrink: 0;
+}
+
+.btn-contact {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 0.7rem;
+  padding: 0.3rem 0.7rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
 }
