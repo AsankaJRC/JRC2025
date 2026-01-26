@@ -8345,3 +8345,7 @@ font-size: 12px;
 .eventsSection{
   scroll-margin-top: 5000px; /* adjust based on your header height */
 }
+
+.gallery-title{
+  font-size: 2rem;
+}
