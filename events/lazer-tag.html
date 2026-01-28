@@ -11,6 +11,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Fancybox CSS -->
+  <link rel="stylesheet" href="../assets/css/fancybox.css" />
 </head>
 <body>
   <!-- Header -->
@@ -26,7 +29,7 @@
         <a href="../events-new.html" class="nav-link">Events</a>
         <a href="../careers-new.html" class="nav-link">Vacancies</a>
       </nav>
-       <a href="../contact-new.html" class="btn btn-primary btn-rounded">Contact Us</a>
+      <a href="../contact-new.html" class="btn btn-primary btn-rounded">Contact Us</a>
       <button class="mobile-menu-btn" aria-label="Menu">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <line x1="3" y1="12" x2="21" y2="12"></line>
@@ -36,305 +39,283 @@
       </button>
     </div>
   </header>
-  
-    
 
-    
- 
+  <!-- Hero with Featured Image -->
+  <section class="event-detail-hero-v3">
+    <div class="event-hero-bg">
+      <img src="../assets/img/events/2025/lazer tag/7.jpeg" alt="JRC Laser Tag Event 2025">
+      <div class="event-hero-overlay"></div>
+    </div>
 
-     <!-- Hero with Featured Image -->
-    <section class="event-detail-hero-v3">
-        <div class="event-hero-bg">
-            <img src="../assets/img/events/2025/lazer tag/7.jpeg" alt="JRC Karaoke Night 2024">
-            <div class="event-hero-overlay"></div>
-        </div>
-        <div class="container" style="position: relative; z-index: 10;">
-            <!-- <nav class="breadcrumb breadcrumb-light">
-                <a href="events-years-v3.html" class="breadcrumb-link">Events</a>
-                <span class="breadcrumb-separator">›</span>
-                <a href="events-years-v3.html?year=2024" class="breadcrumb-link">2025</a>
-                <span class="breadcrumb-separator">›</span>
-                <span class="breadcrumb-current">Movie Night</span>
-            </nav> -->
+    <div class="container" style="position: relative; z-index: 10;">
+      <div class="event-hero-content">
+        <span class="badge">Lazer tag</span>
+        <h1 class="event-hero-title">Lazer <span class="text-gradient">Tag Event 2025</span></h1>
+        <p class="event-hero-description">
+          An exciting team experience filled with energy, friendly competition, and fun moments that strengthened our bonds and teamwork.
+        </p>
 
-            <div class="event-hero-content">
-                <span class="badge">Lazer tag</span>
-                <h1 class="event-hero-title">Lazer <span class="text-gradient">Tag Event 2025</span></h1>
-                <p class="event-hero-description">An exciting team experience filled with energy, friendly competition, and fun moments that strengthened our bonds and teamwork.</p>
-                
-                <div class="event-hero-stats">
-                    <div class="hero-stat">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
-                            <line x1="16" y1="2" x2="16" y2="6"/>
-                            <line x1="8" y1="2" x2="8" y2="6"/>
-                            <line x1="3" y1="10" x2="21" y2="10"/>
-                        </svg>
-                        <span>August 08, 2025</span>
-                    </div>
-                    <div class="hero-stat">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
-                            <circle cx="12" cy="10" r="3"/>
-                        </svg>
-                        <span>Colomo, Sri Lanka</span>
-                    </div>
-                    <div class="hero-stat">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
-                            <circle cx="8.5" cy="8.5" r="1.5"/>
-                            <polyline points="21 15 16 10 5 21"/>
-                        </svg>
-                        <span>07 Photos</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Gallery Section - Lightbox Style -->
-    <section class="section event-gallery-section">
-        <div class="container">
-            <div class="gallery-header">
-                <h2 class="gallery-title">Event <span class="text-primary">Gallery</span></h2>
-                <div class="gallery-actions">
-                    <a href="../events-new.html" class="btn btn-primary btn-rounded">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M19 12H5M12 19l-7-7 7-7"/>
-                        </svg>
-                        Back to Events
-                    </a>
-                </div>
-            </div>
-
-            <!-- Lightbox Gallery with Hover Effects -->
-            <div class="gallery-lightbox">
-                <div class="gallery-lightbox-item">
-                    <img src="../assets/img/events/2025/lazer tag/1.jpeg" alt="Karaoke Night Photo 1">
-                    <div class="lightbox-overlay">
-                        <div class="lightbox-icon">
-                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <span class="item-number">01</span>
-                </div>
-
-                <div class="gallery-lightbox-item">
-                    <img src="../assets/img/events/2025/lazer tag/2.jpeg" alt="Karaoke Night Photo 2">
-                    <div class="lightbox-overlay">
-                        <div class="lightbox-icon">
-                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <span class="item-number">02</span>
-                </div>
-
-                <div class="gallery-lightbox-item">
-                    <img src="../assets/img/events/2025/lazer tag/3.jpeg" alt="Karaoke Night Photo 3">
-                    <div class="lightbox-overlay">
-                        <div class="lightbox-icon">
-                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <span class="item-number">03</span>
-                </div>
-
-                <div class="gallery-lightbox-item">
-                    <img src="../assets/img/events/2025/lazer tag/4.jpeg" alt="Karaoke Night Photo 4">
-                    <div class="lightbox-overlay">
-                        <div class="lightbox-icon">
-                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <span class="item-number">04</span>
-                </div>
-
-                <div class="gallery-lightbox-item">
-                    <img src="../assets/img/events/2025/lazer tag/5.jpeg" alt="Karaoke Night Photo 5">
-                    <div class="lightbox-overlay">
-                        <div class="lightbox-icon">
-                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <span class="item-number">05</span>
-                </div>
-
-                <div class="gallery-lightbox-item">
-                    <img src="../assets/img/events/2025/lazer tag/6.jpeg" alt="Karaoke Night Photo 6">
-                    <div class="lightbox-overlay">
-                        <div class="lightbox-icon">
-                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <span class="item-number">06</span>
-                </div>
-
-                <div class="gallery-lightbox-item">
-                    <img src="../assets/img/events/2025/lazer tag/7.jpeg" alt="Karaoke Night Photo 7">
-                    <div class="lightbox-overlay">
-                        <div class="lightbox-icon">
-                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <span class="item-number">07</span>
-                </div>
-
-                <div class="gallery-lightbox-item">
-                    <img src="../assets/img/events/2025/lazer tag/8.jpeg" alt="Karaoke Night Photo 7">
-                    <div class="lightbox-overlay">
-                        <div class="lightbox-icon">
-                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <span class="item-number">08</span>
-                </div>
-
-                
-
-                
-            </div>
-        </div>
-    </section>
-
-    
-  
-  
-
-  
- <footer class="footer">
-  <div class="container">
-
-    <!-- MAIN FOOTER GRID -->
-    <div class="footer-main">
-
-      <!-- LEFT PANEL -->
-      <div class="footer-left">
-        <a href="/" class="logo">
-          <img src="../assets/img/logo-light.svg" width="150" alt="JRC Logo" />
-        </a>
-
-        <div class="footer-headline">
-          <h2>
-            Let’s build<br />
-            something great<br />
-            together
-          </h2>
-
-          <p>
-            Technology partners delivering custom software solutions
-            for over 6 years across the world.
-          </p>
-
-          <button class="btn btn-primary btn-rounded btn-lg">
-            Start the Conversation
-          </button>
-        </div>
-
-        <!-- <div class="footer-bottom-left">
-          <div class="social-links">
-            <a href="#" aria-label="LinkedIn">
-               <img src="assets/img/linkedin.svg" width="20"/>
-            </a>
-            <a href="#" aria-label="Instagram">
-              <img src="assets/img/instagram.svg" width="15"/>
-            </a>
-            <a href="#" aria-label="Facebook">
-              <img src="assets/img/facebook-app-symbol.svg" width="15"/>
-            </a>
+        <div class="event-hero-stats">
+          <div class="hero-stat">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+              <line x1="16" y1="2" x2="16" y2="6"/>
+              <line x1="8" y1="2" x2="8" y2="6"/>
+              <line x1="3" y1="10" x2="21" y2="10"/>
+            </svg>
+            <span>August 08, 2025</span>
           </div>
-        </div> -->
+
+          <div class="hero-stat">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+              <circle cx="12" cy="10" r="3"/>
+            </svg>
+            <span>Colombo, Sri Lanka</span>
+          </div>
+
+          <div class="hero-stat">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+              <circle cx="8.5" cy="8.5" r="1.5"/>
+              <polyline points="21 15 16 10 5 21"/>
+            </svg>
+            <span>07 Photos</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section - Lightbox Style -->
+  <section class="section event-gallery-section">
+    <div class="container">
+      <div class="gallery-header">
+        <h2 class="gallery-title">Event <span class="text-primary">Gallery</span></h2>
+        <div class="gallery-actions">
+          <a href="../events-new.html" class="btn btn-primary btn-rounded">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M19 12H5M12 19l-7-7 7-7"/>
+            </svg>
+            Back to Events
+          </a>
+        </div>
       </div>
 
-      <!-- RIGHT PANEL -->
-      <div class="footer-right">
+      <!-- Lightbox Gallery with Hover Effects -->
+      <div class="gallery-lightbox">
 
-        <div class="footer-links">
-          <div class="footer-column">
-            <h4>Company</h4>
-            <ul>
-              <li><a href="../services-new.html">Services</a></li>
-              <li><a href="../about-new.html">About Us</a></li>
-              <li><a href="../events-new.html">Events</a></li>
-              <li><a href="../careers-new.html">Careers</a></li>
-              <li><a href="../contact-new.html">Contact</a></li>
-            </ul>
-          </div>
-
-        <div class="footer-column">
-            <h4>Contact Us</h4>
-             <div class="social-links">
-            <a href="https://www.linkedin.com/company/jrcsoftware/posts/?feedView=all" aria-label="LinkedIn">
-               <img src="../assets/img/linkedin.svg" width="20"/>
-            </a>
-            <a href="https://www.instagram.com/jrcsoftware/" aria-label="Instagram">
-              <img src="../assets/img/instagram.svg" width="15"/>
-            </a>
-            <a href="https://web.facebook.com/jrcsoftware" aria-label="Facebook">
-              <img src="../assets/img/facebook-app-symbol.svg" width="15"/>
-            </a>
-          </div>
-        </div>
+        <div class="gallery-lightbox-item">
+          <img src="../assets/img/events/2025/lazer tag/1.jpeg" alt="Laser Tag Photo 1">
+          <a href="../assets/img/events/2025/lazer tag/1.jpeg" data-fancybox="gallery">
+            <div class="lightbox-overlay">
+              <div class="lightbox-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+                </svg>
+              </div>
+            </div>
+          </a>
+          <span class="item-number">01</span>
         </div>
 
-        <div class="footer-offices">
-          <div class="office">
-            <h5>Sri Lanka</h5>
-            <p>
-              No. 46 1/12<br />
-              Dehiwala<br />
-              +94 112 559690<br />
-              <a href="mailto:contact@jrcsoftware.com">
-                contact@jrcsoftware.com
-              </a>
-            </p>
-          </div>
+        <div class="gallery-lightbox-item">
+          <img src="../assets/img/events/2025/lazer tag/2.jpeg" alt="Laser Tag Photo 2">
+          <a href="../assets/img/events/2025/lazer tag/2.jpeg" data-fancybox="gallery">
+            <div class="lightbox-overlay">
+              <div class="lightbox-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+                </svg>
+              </div>
+            </div>
+          </a>
+          <span class="item-number">02</span>
+        </div>
 
-          <div class="office">
-            <h5>Australia</h5>
-            <p>
-              Level 27<br />
-              Melbourne VIC 3000<br />
-              +61 2 8322 8980<br />
-              <a href="mailto:contact@jrcsoftware.com">
-                contact@jrcsoftware.com
-              </a>
-            </p>
-          </div>
+        <div class="gallery-lightbox-item">
+          <img src="../assets/img/events/2025/lazer tag/3.jpeg" alt="Laser Tag Photo 3">
+          <a href="../assets/img/events/2025/lazer tag/3.jpeg" data-fancybox="gallery">
+            <div class="lightbox-overlay">
+              <div class="lightbox-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+                </svg>
+              </div>
+            </div>
+          </a>
+          <span class="item-number">03</span>
+        </div>
+
+        <div class="gallery-lightbox-item">
+          <img src="../assets/img/events/2025/lazer tag/4.jpeg" alt="Laser Tag Photo 4">
+          <a href="../assets/img/events/2025/lazer tag/4.jpeg" data-fancybox="gallery">
+            <div class="lightbox-overlay">
+              <div class="lightbox-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+                </svg>
+              </div>
+            </div>
+          </a>
+          <span class="item-number">04</span>
+        </div>
+
+        <div class="gallery-lightbox-item">
+          <img src="../assets/img/events/2025/lazer tag/5.jpeg" alt="Laser Tag Photo 5">
+          <a href="../assets/img/events/2025/lazer tag/5.jpeg" data-fancybox="gallery">
+            <div class="lightbox-overlay">
+              <div class="lightbox-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+                </svg>
+              </div>
+            </div>
+          </a>
+          <span class="item-number">05</span>
+        </div>
+
+        <div class="gallery-lightbox-item">
+          <img src="../assets/img/events/2025/lazer tag/6.jpeg" alt="Laser Tag Photo 6">
+          <a href="../assets/img/events/2025/lazer tag/6.jpeg" data-fancybox="gallery">
+            <div class="lightbox-overlay">
+              <div class="lightbox-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+                </svg>
+              </div>
+            </div>
+          </a>
+          <span class="item-number">06</span>
+        </div>
+
+        <div class="gallery-lightbox-item">
+          <img src="../assets/img/events/2025/lazer tag/7.jpeg" alt="Laser Tag Photo 7">
+          <a href="../assets/img/events/2025/lazer tag/7.jpeg" data-fancybox="gallery">
+            <div class="lightbox-overlay">
+              <div class="lightbox-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+                </svg>
+              </div>
+            </div>
+          </a>
+          <span class="item-number">07</span>
+        </div>
+
+        <div class="gallery-lightbox-item">
+          <img src="../assets/img/events/2025/lazer tag/8.jpeg" alt="Laser Tag Photo 8">
+          <a href="../assets/img/events/2025/lazer tag/8.jpeg" data-fancybox="gallery">
+            <div class="lightbox-overlay">
+              <div class="lightbox-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+                </svg>
+              </div>
+            </div>
+          </a>
+          <span class="item-number">08</span>
         </div>
 
       </div>
     </div>
+  </section>
 
-    <!-- COPYRIGHT -->
-    <div class="footer-copyright">
-      <p>© 2024 JRC Software. All rights reserved.</p>
-      <!-- <div class="footer-legal">
-        <a href="#">Privacy</a>
-        <a href="#">Terms</a>
-        <a href="#">Cookies</a>
-      </div> -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-main">
+        <div class="footer-left">
+          <a href="/" class="logo">
+            <img src="../assets/img/logo-light.svg" width="150" alt="JRC Logo" />
+          </a>
+
+          <div class="footer-headline">
+            <h2>
+              Let’s build<br />
+              something great<br />
+              together
+            </h2>
+
+            <p>
+              Technology partners delivering custom software solutions
+              for over 6 years across the world.
+            </p>
+
+            <button class="btn btn-primary btn-rounded btn-lg">
+              Start the Conversation
+            </button>
+          </div>
+        </div>
+
+        <div class="footer-right">
+          <div class="footer-links">
+            <div class="footer-column">
+              <h4>Company</h4>
+              <ul>
+                <li><a href="../services-new.html">Services</a></li>
+                <li><a href="../about-new.html">About Us</a></li>
+                <li><a href="../events-new.html">Events</a></li>
+                <li><a href="../careers-new.html">Careers</a></li>
+                <li><a href="../contact-new.html">Contact</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-column">
+              <h4>Contact Us</h4>
+              <div class="social-links">
+                <a href="https://www.linkedin.com/company/jrcsoftware/posts/?feedView=all" aria-label="LinkedIn">
+                  <img src="../assets/img/linkedin.svg" width="20"/>
+                </a>
+                <a href="https://www.instagram.com/jrcsoftware/" aria-label="Instagram">
+                  <img src="../assets/img/instagram.svg" width="15"/>
+                </a>
+                <a href="https://web.facebook.com/jrcsoftware" aria-label="Facebook">
+                  <img src="../assets/img/facebook-app-symbol.svg" width="15"/>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer-offices">
+            <div class="office">
+              <h5>Sri Lanka</h5>
+              <p>
+                No. 46 1/12<br />
+                Dehiwala<br />
+                +94 112 559690<br />
+                <a href="mailto:contact@jrcsoftware.com">contact@jrcsoftware.com</a>
+              </p>
+            </div>
+
+            <div class="office">
+              <h5>Australia</h5>
+              <p>
+                Level 27<br />
+                Melbourne VIC 3000<br />
+                +61 2 8322 8980<br />
+                <a href="mailto:contact@jrcsoftware.com">contact@jrcsoftware.com</a>
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="footer-copyright">
+        <p>© 2024 JRC Software. All rights reserved.</p>
+      </div>
     </div>
+  </footer>
 
-  </div>
-</footer>
+  <!-- Fancybox JS -->
+  <script src="../assets/js/jquery-3.6.0.min.js"></script>
+  <script src="../assets/js/fancybox.js"></script>
 
- 
+  <script type="text/javascript">
+    Fancybox.bind("[data-fancybox]", {
+      // Your custom options
+    });
+  </script>
 
 </body>
 </html>

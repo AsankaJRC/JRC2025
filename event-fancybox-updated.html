@@ -46,7 +46,7 @@
      <!-- Hero with Featured Image -->
     <section class="event-detail-hero-v3">
         <div class="event-hero-bg">
-            <img src="assets/img/events//2025/movie-night/2.jpg" alt="JRC Karaoke Night 2024">
+            <img src="assets/img/events/2025/movie-night/2.jpg" alt="JRC Movie Night 2024">
             <div class="event-hero-overlay"></div>
         </div>
         <div class="container" style="position: relative; z-index: 10;">
@@ -111,7 +111,7 @@
             <!-- Lightbox Gallery with Hover Effects -->
             <div class="gallery-lightbox">
                 <div class="gallery-lightbox-item">
-                    <img src="assets/img/events/2025/movie-night/1a.jpg" alt="Karaoke Night Photo 1"/>
+                    <img loading="lazy" src="assets/img/events/2025/movie-night/1a.jpg" alt="Movie Night Photo 1"/>
 					<a href="assets/img/events/2025/movie-night/1a.jpg" data-fancybox="gallery">
 						<div class="lightbox-overlay">
 							<div class="lightbox-icon">
@@ -126,7 +126,7 @@
                 </div>
 
 				 <div class="gallery-lightbox-item">
-					<img src="assets/img/events/2025/movie-night/1b.jpg" alt="Karaoke Night Photo 2"/>
+					<img loading="lazy" src="assets/img/events/2025/movie-night/1b.jpg" alt="Movie Night Photo 2"/>
 
 					<a href="assets/img/events/2025/movie-night/1b.jpg" data-fancybox="gallery">
 						<div class="lightbox-overlay">
@@ -143,7 +143,7 @@
 				</div>
 
 				<div class="gallery-lightbox-item">
-					<img src="assets/img/events/2025/movie-night/2.jpg" alt="Karaoke Night Photo 3"/>
+					<img loading="lazy" src="assets/img/events/2025/movie-night/2.jpg" alt="Movie Night Photo 3"/>
 
 					<a href="assets/img/events/2025/movie-night/2.jpg" data-fancybox="gallery">
 						<div class="lightbox-overlay">
@@ -160,7 +160,7 @@
 				</div>
 
 				<div class="gallery-lightbox-item">
-					<img src="assets/img/events/2025/movie-night/3.jpg" alt="Karaoke Night Photo 4"/>
+					<img loading="lazy" src="assets/img/events/2025/movie-night/3.jpg" alt="Movie Night Photo 4"/>
 
 					<a href="assets/img/events/2025/movie-night/3.jpg" data-fancybox="gallery">
 						<div class="lightbox-overlay">
@@ -177,7 +177,7 @@
 				</div>
 
 				<div class="gallery-lightbox-item">
-					<img src="assets/img/events/2025/movie-night/4.jpg" alt="Karaoke Night Photo 5"/>
+					<img loading="lazy" src="assets/img/events/2025/movie-night/4.jpg" alt="Movie Night Photo 5"/>
 
 					<a href="assets/img/events/2025/movie-night/4.jpg" data-fancybox="gallery">
 						<div class="lightbox-overlay">
@@ -194,7 +194,7 @@
 				</div>
 
 				<div class="gallery-lightbox-item">
-					<img src="assets/img/events/2025/movie-night/5.jpg" alt="Karaoke Night Photo 6"/>
+					<img loading="lazy" src="assets/img/events/2025/movie-night/5.jpg" alt="Movie Night Photo 6"/>
 
 					<a href="assets/img/events/2025/movie-night/5.jpg" data-fancybox="gallery">
 						<div class="lightbox-overlay">
@@ -211,7 +211,7 @@
 				</div>
 
 				<div class="gallery-lightbox-item">
-					<img src="assets/img/events/2025/movie-night/6.jpg" alt="Karaoke Night Photo 7"/>
+					<img loading="lazy" src="assets/img/events/2025/movie-night/6.jpg" alt="Movie Night Photo 7"/>
 
 					<a href="assets/img/events/2025/movie-night/6.jpg" data-fancybox="gallery">
 						<div class="lightbox-overlay">
@@ -228,7 +228,7 @@
 				</div>
 
 				<div class="gallery-lightbox-item">
-					<img src="assets/img/events/2025/movie-night/7.jpg" alt="Karaoke Night Photo 8"/>
+					<img loading="lazy" src="assets/img/events/2025/movie-night/7.jpg" alt="Movie Night Photo 8"/>
 
 					<a href="assets/img/events/2025/movie-night/7.jpg" data-fancybox="gallery">
 						<div class="lightbox-overlay">
@@ -245,7 +245,7 @@
 				</div>
 
 				<div class="gallery-lightbox-item">
-					<img src="assets/img/events/2025/movie-night/8.jpg" alt="Karaoke Night Photo 9"/>
+					<img loading="lazy" src="assets/img/events/2025/movie-night/8.jpg" alt="Movie Night Photo 9"/>
 
 					<a href="assets/img/events/2025/movie-night/8.jpg" data-fancybox="gallery">
 						<div class="lightbox-overlay">
@@ -262,7 +262,7 @@
 				</div>
 
 				<div class="gallery-lightbox-item">
-					<img src="assets/img/events/2025/movie-night/9.jpg" alt="Karaoke Night Photo 10"/>
+					<img loading="lazy" src="assets/img/events/2025/movie-night/9.jpg" alt="Movie Night Photo 10"/>
 
 					<a href="assets/img/events/2025/movie-night/9.jpg" data-fancybox="gallery">
 						<div class="lightbox-overlay">
@@ -409,10 +409,12 @@
  <script src="assets/js/jquery-3.6.0.min.js"></script>
  <script src="assets/js/fancybox.js"></script>
 
-<script type="text/javascript">
-Fancybox.bind("[data-fancybox]", {
-  // Your custom options
-});
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    Fancybox.bind("[data-fancybox]", {
+      // place options here if needed
+    });
+  });
 </script>
 
 </body>

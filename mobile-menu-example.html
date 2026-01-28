@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Menu Example - JRC Software</title>
+    <link rel="stylesheet" href="assets/css/new.css">
+    <link rel="stylesheet" href="assets/css/mobile-menu.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-content">
+            <a href="index.html" class="logo">JRC SOFTWARE</a>
+            
+            <!-- Desktop Navigation (hidden on mobile) -->
+            <nav class="nav">
+                <a href="about-v1.html" class="nav-link">About</a>
+                <a href="services-v1.html" class="nav-link">Services</a>
+                <a href="events-v1.html" class="nav-link">Events</a>
+                <a href="careers-v1.html" class="nav-link">Careers</a>
+                <a href="contact-v1.html" class="nav-link">Contact</a>
+            </nav>
+            
+            <!-- Desktop CTA Button (hidden on mobile) -->
+            <a href="contact-v1.html" class="btn btn-primary btn-rounded">Get Started</a>
+            
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-btn" aria-label="Open menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay"></div>
+
+    <!-- Mobile Menu Panel -->
+    <nav class="mobile-menu">
+        <div class="mobile-menu-header">
+            <a href="index.html" class="mobile-menu-logo">JRC <span>SOFTWARE</span></a>
+            <button class="mobile-menu-close" aria-label="Close menu">&times;</button>
+        </div>
+        <div class="mobile-menu-nav">
+            <a href="about-v1.html">About</a>
+            <a href="services-v1.html">Services</a>
+            <a href="events-v1.html">Events</a>
+            <a href="careers-v1.html">Careers</a>
+            <a href="contact-v1.html">Contact</a>
+        </div>
+        <div class="mobile-menu-cta">
+            <a href="contact-v1.html" class="btn btn-primary btn-rounded">Get Started</a>
+        </div>
+    </nav>
+
+    <!-- Page Content Example -->
+    <main style="padding-top: 80px; min-height: 100vh;">
+        <div class="container" style="padding: 4rem 1.5rem; text-align: center;">
+            <h1 style="font-size: 2.5rem; margin-bottom: 1rem;">Mobile Menu Example</h1>
+            <p style="color: var(--text-secondary);">Resize your browser to mobile width and click the hamburger menu to test.</p>
+        </div>
+    </main>
+
+    <!-- Mobile Menu Script -->
+    <script src="assets/js/mobile-menu.js"></script>
+</body>
+</html>

@@ -6,6 +6,7 @@
   <title>JRC Software - Accelerating Digital Transformation with AI & Technology</title>
   <meta name="description" content="JRC Software delivers cutting-edge custom software, AI and digital transformation solutions. Backed by top engineers and industry experts.">
   <link rel="stylesheet" href="assets/css/new.css">
+  <link rel="stylesheet" href="assets/css/mobile-menu.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -34,6 +35,31 @@
       </button>
     </div>
   </header>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu-overlay"></div>
+
+  <!-- Mobile Menu Panel -->
+  <div class="mobile-menu">
+    <div class="mobile-menu-header">
+      <a href="new.html" class="mobile-menu-logo">JRC <span>SOFTWARE</span></a>
+      <button class="mobile-menu-close" aria-label="Close menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    <nav class="mobile-menu-nav">
+      <a href="services-new.html">Services</a>
+      <a href="about-new.html">About</a>
+      <a href="events-new.html">Events</a>
+      <a href="careers-new.html">Vacancies</a>
+    </nav>
+    <div class="mobile-menu-cta">
+      <a href="contact-new.html" class="btn btn-primary btn-rounded">Contact Us</a>
+    </div>
+  </div>
 
    <section class="hero">
     <div class="hero-bg">
@@ -798,5 +824,6 @@
   </div>
 </footer>
 
+<script src="assets/js/mobile-menu.js"></script>
 </body>
 </html>
