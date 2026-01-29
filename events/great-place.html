@@ -11,6 +11,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Fancybox CSS -->
+  <link rel="stylesheet" href="../assets/css/fancybox.css" />
 </head>
 <body>
   <!-- Header -->
@@ -39,7 +42,7 @@
   <!-- Hero with Featured Image -->
   <section class="event-detail-hero-v3">
     <div class="event-hero-bg">
-      <img src="../assets/img/events/2023/GPTW/3.jpg" alt="bowling night">
+      <img src="../assets/img/events/2023/GPTW/3.jpg" alt="Great Place to Work - Featured Photo">
       <div class="event-hero-overlay"></div>
     </div>
 
@@ -48,7 +51,7 @@
         <span class="badge">Great Place</span>
         <h1 class="event-hero-title"><span class="text-gradient">Great Place</span> to Work</h1>
         <p class="event-hero-description">
-          An award recieved for the dediaction vision and our team work.
+          An award received for our dedication, vision, and the teamwork that drives everything we do.
         </p>
 
         <div class="event-hero-stats">
@@ -66,7 +69,7 @@
               <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
               <circle cx="12" cy="10" r="3"/>
             </svg>
-            <span>Colombo , Sri Lanka</span>
+            <span>Colombo, Sri Lanka</span>
           </div>
           <div class="hero-stat">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -99,43 +102,44 @@
       <!-- Lightbox Gallery with Hover Effects -->
       <div class="gallery-lightbox">
 
+        <!-- 01 -->
         <div class="gallery-lightbox-item">
-          <img src="../assets/img/events/2023/GPTW/1.jpg" alt="GPTW">
-          <div class="lightbox-overlay">
-            <div class="lightbox-icon">
+          <img src="../assets/img/events/2023/GPTW/1.jpg" alt="Great Place to Work Photo 1">
+          <a href="../assets/img/events/2023/GPTW/1.jpg" data-fancybox="gallery">
+            <div class="lightbox-overlay"><div class="lightbox-icon">
               <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
               </svg>
-            </div>
-          </div>
+            </div></div>
+          </a>
           <span class="item-number">01</span>
         </div>
 
+        <!-- 02 -->
         <div class="gallery-lightbox-item">
-          <img src="../assets/img/events/2023/GPTW/2.jpg" alt="GPTW">
-          <div class="lightbox-overlay">
-            <div class="lightbox-icon">
+          <img src="../assets/img/events/2023/GPTW/2.jpg" alt="Great Place to Work Photo 2">
+          <a href="../assets/img/events/2023/GPTW/2.jpg" data-fancybox="gallery">
+            <div class="lightbox-overlay"><div class="lightbox-icon">
               <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
               </svg>
-            </div>
-          </div>
+            </div></div>
+          </a>
           <span class="item-number">02</span>
         </div>
 
+        <!-- 03 -->
         <div class="gallery-lightbox-item">
-          <img src="../assets/img/events/2023/GPTW/3.jpg" alt="GTPW">
-          <div class="lightbox-overlay">
-            <div class="lightbox-icon">
+          <img src="../assets/img/events/2023/GPTW/3.jpg" alt="Great Place to Work Photo 3">
+          <a href="../assets/img/events/2023/GPTW/3.jpg" data-fancybox="gallery">
+            <div class="lightbox-overlay"><div class="lightbox-icon">
               <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
               </svg>
-            </div>
-          </div>
+            </div></div>
+          </a>
           <span class="item-number">03</span>
         </div>
-
-        
 
       </div>
     </div>
@@ -238,6 +242,16 @@
 
     </div>
   </footer>
+
+  <!-- Fancybox JS -->
+  <script src="../assets/js/jquery-3.6.0.min.js"></script>
+  <script src="../assets/js/fancybox.js"></script>
+
+  <script type="text/javascript">
+    Fancybox.bind("[data-fancybox]", {
+      // options (optional)
+    });
+  </script>
 
 </body>
 </html>
