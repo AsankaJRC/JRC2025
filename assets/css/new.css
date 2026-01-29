@@ -303,7 +303,7 @@ h1, h2, h3, h4, h5, h6 {
   background-image: url("../img/hero.svg");
   background-size: contain;        
   background-position: center;   
-  background-repeat: repeat;
+  background-repeat: no-repeat;
 
   /* Optional: slightly dim the image */
   filter: grayscale(100%) brightness(0.6); 
@@ -3090,7 +3090,7 @@ font-size: 12px;
 
   /* HERO BACKGROUND IMAGE */
   background-image: url("../img/about-us-hero.svg");
-  background-size: contain;
+  background-size: cover;
   background-position: right center;
   background-repeat: no-repeat;
   
@@ -5834,7 +5834,7 @@ font-size: 12px;
   background-size: cover;      /* 🔥 Important */
   background-position: center;
   background-repeat: no-repeat;
-  filter: grayscale(100%) brightness(0.8);
+  filter: grayscale(100%) brightness(0.7);
 }
 
 /* Dark overlay for readability */
