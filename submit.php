@@ -23,10 +23,10 @@ $safeName = htmlspecialchars($name, ENT_QUOTES, "UTF-8");
 $safeMessage = htmlspecialchars($message, ENT_QUOTES, "UTF-8");
 
 // Email example
-$to = "admin@example.com";
+$to = "asanka@jrcsoftware.com";
 $subject = "New contact form submission";
 $body = "Name: $safeName\nEmail: $email\n\nMessage:\n$safeMessage";
-$headers = "From: no-reply@example.com\r\nReply-To: $email";
+$headers = "From: contact@jrcsoftware.com\r\nReply-To: $email";
 
 mail($to, $subject, $body, $headers);
 
