@@ -301,7 +301,7 @@ h1, h2, h3, h4, h5, h6 {
 
   /* ✅ HERO BACKGROUND IMAGE */
   background-image: url("../img/hero.svg");
-  background-size: contain;        
+  background-size: cover;        
   background-position: center;   
   background-repeat: no-repeat;
 
@@ -2953,7 +2953,7 @@ font-size: 12px;
 
   /* HERO BACKGROUND IMAGE */
   background-image: url("../img/contact-us.svg");
-  background-size: contain;
+  background-size: cover;
   background-position: right center;
   background-repeat: no-repeat;
   
@@ -3092,7 +3092,7 @@ font-size: 12px;
   /* HERO BACKGROUND IMAGE */
   background-image: url("../img/about-us-hero.svg");
   background-size: cover;
-  background-position: right center;
+  background-position: center;
   background-repeat: no-repeat;
   
 
@@ -5864,7 +5864,7 @@ font-size: 12px;
 
   /* HERO BACKGROUND IMAGE */
   background-image: url("../img/events/6th-anniversary.svg");
-  background-size: cover;      /* 🔥 Important */
+  background-size: cover;      
   background-position: center;
   background-repeat: no-repeat;
   filter: grayscale(100%) brightness(0.7);
@@ -8511,5 +8511,114 @@ font-size: 12px;
   border-color: var(--primary);
   color: var(--primary-foreground);
 }
+  .events-hero{
+    min-height: 100vh;
+    display:flex;
+    align-items:center;
+    position:relative;
+    overflow:hidden;
+    padding: clamp(64px, 8vh, 110px) 0; /* gives breathing space on small screens */
+  }
 
+  .events-hero-bento{
+    position:absolute;
+    inset:0;
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap:4px;
+    filter: grayscale(100%) brightness(0.9);
+    opacity:0.8;
+    transform: scale(1.05);
+  }
+  .bento-tile{
+    background-position:center;
+    background-size:cover;
+    background-repeat:no-repeat;
+    min-height:0;
+  }
+  .bento-tile.span-2{ grid-column: span 2; }
+  .bento-tile.row-2{ grid-row: span 2; }
+
+  .events-hero-overlay{
+    position:absolute;
+    inset:0;
+    background: radial-gradient(ellipse at center,
+      rgba(10,10,10,0.7) 20%,
+      rgba(10,10,10,0.95) 100%);
+  }
+
+  .events-hero-content{ position:relative; z-index:10; }
+  .events-hero-inner{
+    max-width: 920px;
+    margin: 0 auto;
+    text-align:center;
+    padding: 0 12px; /* mobile side padding */
+  }
+
+  .events-hero-badge{ margin-bottom: 1.25rem; display:inline-flex; }
+
+  .events-hero-title{
+    font-size: clamp(2.25rem, 8vw, 5rem);
+    font-weight: 800;
+    line-height: 1;
+    margin: 0 0 1.25rem;
+  }
+
+  .grad-text{
+    display:block;
+    background: var(--gradient-primary);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+  }
+  .plain-text{ display:block; color:#fff; }
+
+  .events-hero-desc{
+    font-size: clamp(0.95rem, 2.2vw, 1.1rem);
+    color:#a3a3a3;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+  }
+
+  .events-hero-stats{
+    display:flex;
+    justify-content:center;
+    gap: clamp(1.25rem, 5vw, 4rem);
+    flex-wrap: wrap;            /* ✅ wraps on mobile */
+    row-gap: 1.25rem;
+  }
+
+  .stat{ text-align:center; min-width: 120px; }
+  .stat-num{
+    font-size: clamp(2rem, 7vw, 3rem);
+    font-weight: 800;
+    line-height: 1;
+    margin-bottom: 0.35rem;
+  }
+  .stat-label{
+    color:#737373;
+    font-size: 0.85rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  /* ✅ Mobile layout changes */
+  @media (max-width: 576px){
+    .events-hero{ padding: 88px 0 64px; }
+    .events-hero-bento{
+      grid-template-columns: repeat(2, 1fr); /* ✅ 2 columns on mobile */
+      grid-template-rows: repeat(5, 1fr);    /* ✅ more rows */
+      gap:3px;
+      opacity:0.55;                          /* slightly calmer behind text */
+      transform: scale(1.12);
+    }
+    .events-hero-inner{ padding: 0 14px; }
+    .bento-tile.span-2{ grid-column: span 2; } /* still looks “bento” */
+    .stat{ min-width: 140px; } /* makes 2-per-row feel balanced */
+  }
+
+  /* ✅ Very small screens */
+  @media (max-width: 360px){
+    .stat{ min-width: 100%; } /* stack stats vertically */
+  }
 
