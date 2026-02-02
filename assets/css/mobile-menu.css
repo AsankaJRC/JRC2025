@@ -158,6 +158,10 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: var(--border-radius);
   justify-content: space-between;
 }
+.btn-cta {
+  width: fit-content; /* prevents stretching full width */
+  border-radius: 900px;
+}
 
 .btn-icon-text {
   display: flex;
