@@ -8622,5 +8622,24 @@ font-size: 12px;
     .stat{ min-width: 100%; } /* stack stats vertically */
   }
 
+  @media (min-width: 1400px) {
+
+  .hero-about {
+    min-height: 100vh;        /* full screen height */
+    display: flex;
+    align-items: center;     /* vertical center */
+  }
+
+  .hero-about .container {
+    width: 100%;
+  }
+
+  /* remove top push on large screens */
+  .hero-about-content {
+    padding-top: 0;
+  }
+
+}
+
   
 
