@@ -301,7 +301,7 @@ h1, h2, h3, h4, h5, h6 {
 
   /* ✅ HERO BACKGROUND IMAGE */
   background-image: url("../img/hero.svg");
-  background-size: cover;        
+  background-size: contain;        
   background-position: center;   
   background-repeat: no-repeat;
 
