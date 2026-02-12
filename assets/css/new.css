@@ -8638,8 +8638,445 @@ font-size: 12px;
   .hero-about-content {
     padding-top: 0;
   }
+  
+}
+
+
+/* =====================================================
+   RESPONSIVE FIXES - TABLET & MOBILE
+   Added without modifying existing code above.
+   ===================================================== */
+
+   @media (min-width: 768px) and (max-width: 1024px) {
+
+  /* #1 Home - Take full width for contents on tabs */
+  .container {
+    max-width: 100%;
+    padding: 0 2rem;
+  }
+
+  /* #2 Home - Footer bottom 4 sections same level */
+  .footer-offices {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  .footer-links {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  .footer-copyright {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  /* #3 Home - Padding right on logo section */
+  .logo-cloud {
+    padding: 3rem 1rem;
+  }
+
+  .logo-cloud-items {
+    gap: 1.5rem;
+    justify-content: center;
+    /* padding-right: 1rem; */
+  }
+
+  /* #4 Home - Services: Keep only two sections per row */
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  /* #5 Services page - Keep only two sections per row */
+  .services-grid-v1 {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+
+/* ── PREVENT HORIZONTAL OVERFLOW (all sizes) ── */
+html, body {
+  overflow-x: hidden;
+}
+
+/* =========================================
+   FOOTER – FULL WIDTH ON TABLET (iPad)
+========================================= */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  .footer .container {
+    max-width: 100%;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+
+  .footer-main {
+    grid-template-columns: 1fr; /* stack */
+  }
+
+  .footer-right {
+    border-left: none;
+    padding-left: 0;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    padding-top: 3rem;
+  }
+
+  .footer-headline p {
+    max-width: 100%; /* allow text to expand */
+  }
+
+}
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .footer-headline h2 br {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  .footer-right {
+    display: flex;
+    width: 100%;
+  }
+
+  .footer-links,
+  .footer-offices {
+    display: contents; /* removes wrapper spacing influence */
+  }
+
+  .footer-column,
+  .office {
+    flex: 1;
+  }
 
 }
 
-  
+/* iPad / Tablet only */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  .hero-about{
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;   /* ✅ vertical center */
+    padding-top: 0;        /* ✅ stop pushing content down/up */
+    padding-bottom: 0;
+    overflow: hidden;
+  }
+
+  .hero-about .container{
+    width: 100%;
+    position: relative;
+    z-index: 10;           /* ✅ stay above bg layers */
+  }
+
+  .hero-about-content{
+    /* keep your left alignment (no text-align center) */
+    max-width: 720px;      /* optional: keeps text block nice on tablet */
+  }
+
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  .hero-about-title br,
+  .hero-about-subtitle br {
+    display: none;
+  }
+
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  .hero-about-title {
+    width: 100%;
+    max-width: 100%;
+  }
+
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  .culture-card-section .container {
+    max-width: 100%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .culture-main-grid {
+    grid-template-columns: 1fr;   /* Stack layout */
+  }
+
+  .culture-content-card {
+    width: 100%;
+    max-width: 100%;
+  }
+
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  .culture-title br:first-of-type {
+    display: none;
+  }
+
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .events-grid .hidden-div {
+    display: none !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .events-grid {
+    display: flex;              /* override grid behavior on tablet */
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: flex-start;
+  }
+
+  .events-grid .event-card {
+    width: 420px;               /* desktop-like width (adjust if needed) */
+    max-width: 100%;
+    flex: 0 0 auto;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  /* 1) Vertically center the whole hero section */
+  .hero-careers {
+    min-height: 100vh;              /* keep full height */
+    display: flex;
+    align-items: center;            /* vertical center */
+    padding-top: 0;                 /* remove any top push */
+    padding-bottom: 0;
+  }
+
+  /* Make sure background layers don’t affect centering */
+  .hero-careers-bg,
+  .hero-careers-glow,
+  .hero-careers-fade {
+    pointer-events: none;
+  }
+
+  /* Ensure content sits above background */
+  .hero-careers .container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+  }
+
+  /* Optional: if your content has top margins pushing it up */
+  .hero-careers-content {
+    margin-top: 0 !important;
+  }
+
+  /* 2) "Remove" the BR in the title (hide it) */
+  .hero-careers-title br {
+    display: none;
+  }
+
+  /* 3) "Remove" the BR in the first subtitle line */
+  .hero-careers-subtitle br {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 810px) and (max-width: 830px) {
+
+  .about-grid {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about-content {
+    width: 100%;
+  }
+
+  .about-visual {
+    display: block;
+    width: 100%;
+    margin-top: 2rem;
+  }
+
+  .visual-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .about-image {
+    width: 100%;
+    /* max-width: 500px; */
+    height: auto;
+  }
+
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .hero-contact {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+  }
+}
+
+@media (max-width: 1024px) {
+
+  /* 1) First hero: don't force full viewport height on tablet */
+  .hero-contact{
+    min-height: auto !important;
+    height: auto !important;
+    padding-top: 6.5rem;   /* give space below fixed header */
+    padding-bottom: 2rem;  /* reduce bottom space */
+    display: block !important; /* (if you made it flex earlier) */
+  }
+
+  /* Make sure background layers don't add height */
+  .hero-contact-bg,
+  .hero-contact-glow,
+  .hero-fade{
+    position: absolute;
+    inset: 0;
+  }
+
+  /* 2) Second hero: reduce big top spacing / min-height */
+  .contact-hero-v3{
+    min-height: auto !important;
+    height: auto !important;
+    padding-top: 2.5rem !important;
+    padding-bottom: 3rem !important;
+    margin-top: 0 !important;
+  }
+
+  /* If your v3 wrapper has big internal padding/gaps */
+  .hero-content-v3{
+    padding-top: 0 !important;
+    gap: 1.75rem; /* reduce spacing between left text and form */
+  }
+}
+
+
+/* Extra tighter spacing for phones (iPhone 12 Pro etc.) */
+@media (max-width: 600px) {
+
+  .hero-contact{
+    padding-top: 5.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .contact-hero-v3{
+    padding-top: 1.75rem !important;
+    padding-bottom: 2.25rem !important;
+  }
+
+  .hero-content-v3{
+    gap: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-buttons .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    white-space: nowrap;        /* prevents text breaking */
+    font-size: 0.9rem;          /* slightly reduce font size */
+    padding: 0.9rem 1.2rem;     /* adjust padding */
+  }
+
+  .hero-buttons .btn svg {
+    flex-shrink: 0;             /* prevents icon shrinking */
+  }
+}
+
+@media (max-width: 480px) {
+
+  /* Reduce grid gap */
+  .section.section-alt > .container > div > div {
+    gap: 1rem !important;
+  }
+
+  /* Reduce big number size */
+  .section.section-alt div[style*="font-size: 5rem"] {
+    font-size: 3rem !important;
+  }
+
+  /* Reduce heading size slightly */
+  .section.section-alt h3 {
+    font-size: 1.25rem !important;
+  }
+
+  /* Remove extra top padding */
+  .section.section-alt div[style*="padding-top: 1rem"] {
+    padding-top: 0 !important;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .gallery-header {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.25rem;
+  }
+
+  .gallery-title {
+    width: 100%;
+  }
+
+  .gallery-actions {
+    width: 100%;
+  }
+
+  .gallery-actions .btn {
+    width: 100%;
+    justify-content: center; /* center icon + text */
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  /* Hide extra cards properly */
+  .events-grid .hidden-div {
+    display: none !important;
+  }
+
+  /* Make grid behave like single column */
+  .events-grid {
+    display: flex !important;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  /* Remove extra bottom spacing */
+  #eventsSection {
+    padding-bottom: 2rem;
+  }
+
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  .event-detail-hero-v3 {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;   /* vertical center */
+    padding-top: 0;        /* remove extra push down */
+  }
+
+  .event-detail-hero-v3 .container {
+    width: 100%;
+  }
+
+  .event-hero-content {
+    margin: 0 auto;
+  }
+
+}
 
