@@ -8309,6 +8309,43 @@ font-size: 12px;
   
 }
 
+ @media (min-width: 1400px) {
+
+  .hero-careers {
+    min-height: 100vh;        
+    display: flex;
+    align-items: center;     
+  }
+
+  .hero-careers .container {
+    width: 100%;
+  }
+
+  
+  .hero-careers-content {
+    padding-top: 0;
+  }
+  
+}
+
+ @media (min-width: 1400px) {
+
+  .hero-contact {
+    min-height: 100vh;        
+    display: flex;
+    align-items: center;     
+  }
+
+  .hero-contact .container {
+    width: 100%;
+  }
+
+  
+  .hero-contact-content {
+    padding-top: 0;
+  }
+  
+}
 
 
 
