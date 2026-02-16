@@ -8890,8 +8890,117 @@ html, body {
       justify-content: center;
     }
 
+@media (min-width: 768px) and (max-width: 1024px) {
 
+  .events-grid{
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+    align-items: start;
+  }
 
+  .events-grid .event-card{
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+}
+
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+@media (max-width: 480px) {
+  .events-hero {
+    min-height: 100svh;               /* better than 100vh on iOS */
+    padding: 5.5rem 0 3.5rem;         /* pulls content into a nice centered block */
+  }
+
+  .events-hero-badge {
+    margin-bottom: 1rem !important;
+  }
+
+  .events-hero-title {
+    margin-bottom: 1rem !important;
+    font-size: clamp(2.2rem, 10vw, 3rem) !important;
+    line-height: 1.05 !important;
+  }
+
+  .events-hero-subtitle {
+    margin: 0 auto 1.5rem !important;
+    max-width: 320px !important;
+    font-size: 0.95rem !important;
+    line-height: 1.6 !important;
+  }
+
+  .events-hero-stats {
+    gap: 1.5rem !important;
+    flex-wrap: wrap;                  /* avoids weird squeezing */
+  }
+
+  .events-hero-stats > div > div:first-child {
+    font-size: 2.1rem !important;      /* the big numbers */
+  }
+}
+
+@media (max-width: 576px) {
+  .services-hero-full {
+    /* push hero content below the header */
+    padding-top: calc(90px + env(safe-area-inset-top));
+    padding-bottom: 2rem;
+
+    /* keep it looking centered but not hidden */
+    min-height: calc(100vh - env(safe-area-inset-top));
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+
+  /* 1) Stop the hero from starting under the fixed header */
+  .services-hero-full {
+    min-height: calc(100svh - 4rem);         /* account for fixed header */
+    padding-top: calc(4rem + 1.25rem);       /* header + breathing room */
+    padding-bottom: 3rem;
+    align-items: flex-start !important;      /* prevents title going behind header */
+  }
+
+  /* 2) Remove the "shadow" look by making header more solid on mobile */
+  .header {
+    background: hsla(0, 0%, 4%, 0.95);       /* more opaque so glow won't show through */
+  }
+
+  /* optional: if glow is the main culprit, push it below the header */
+  .services-hero-full .hero-glow {
+    top: 4rem;
+    height: calc(100% - 4rem);
+  }
+}
+
+/* Make sure the hero is the stacking context */
+.services-hero-full {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Put effects BEHIND */
+.services-hero-full .hero-glow,
+.services-hero-full .hero-fade,
+.services-hero-full::before,
+.services-hero-full::after {
+  z-index: 0 !important;
+  pointer-events: none;
+}
+
+/* Put your text/content ABOVE */
+.services-hero-full .container,
+.services-hero-full .services-hero-content,
+.services-hero-full .services-hero-centered {
+  position: relative;
+  z-index: 5;
+}
     
 
     
