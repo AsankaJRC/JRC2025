@@ -9499,3 +9499,8 @@ body {
     padding: 6rem 0 3rem;  
   }
 }
+
+.leadership-section {
+  padding-top: 2.5rem;   /* adjust if you want even tighter */
+  padding-bottom: 6rem;  /* keep bottom spacing consistent */
+}
