@@ -8784,7 +8784,7 @@ html, body {
 
    
 
-     /* ── 404 V5: Concentric Rings / Radar ── */
+     
     .error-page-v5 {
       min-height: 100vh;
       display: flex;
@@ -8799,7 +8799,7 @@ html, body {
       inset: 0;
     }
 
-    /* Concentric rings */
+    
     .error-ring {
       position: absolute;
       border-radius: 50%;
@@ -8813,7 +8813,7 @@ html, body {
     .error-ring-3 { width: 700px; height: 700px; border-color: hsla(24, 100%, 50%, 0.03); }
     .error-ring-4 { width: 900px; height: 900px; border-color: hsla(24, 100%, 50%, 0.02); }
 
-    /* Center dot pulse */
+    
     .error-dot {
       position: absolute;
       width: 8px;
@@ -8915,8 +8915,8 @@ body {
 
 @media (max-width: 480px) {
   .events-hero {
-    min-height: 100svh;               /* better than 100vh on iOS */
-    padding: 5.5rem 0 3.5rem;         /* pulls content into a nice centered block */
+    min-height: 100svh;               
+    padding: 5.5rem 0 3.5rem;         
   }
 
   .events-hero-badge {
@@ -8938,21 +8938,21 @@ body {
 
   .events-hero-stats {
     gap: 1.5rem !important;
-    flex-wrap: wrap;                  /* avoids weird squeezing */
+    flex-wrap: wrap;                  
   }
 
   .events-hero-stats > div > div:first-child {
-    font-size: 2.1rem !important;      /* the big numbers */
+    font-size: 2.1rem !important;      
   }
 }
 
 @media (max-width: 576px) {
   .services-hero-full {
-    /* push hero content below the header */
+    
     padding-top: calc(90px + env(safe-area-inset-top));
     padding-bottom: 2rem;
 
-    /* keep it looking centered but not hidden */
+    
     min-height: calc(100vh - env(safe-area-inset-top));
     align-items: flex-start;
   }
@@ -8960,33 +8960,33 @@ body {
 
 @media (max-width: 480px) {
 
-  /* 1) Stop the hero from starting under the fixed header */
+  
   .services-hero-full {
-    min-height: calc(100svh - 4rem);         /* account for fixed header */
-    padding-top: calc(4rem + 1.25rem);       /* header + breathing room */
+    min-height: calc(100svh - 4rem);         
+    padding-top: calc(4rem + 1.25rem);       
     padding-bottom: 3rem;
-    align-items: flex-start !important;      /* prevents title going behind header */
+    align-items: flex-start !important;      
   }
 
-  /* 2) Remove the "shadow" look by making header more solid on mobile */
+  
   .header {
-    background: hsla(0, 0%, 4%, 0.95);       /* more opaque so glow won't show through */
+    background: hsla(0, 0%, 4%, 0.95);       
   }
 
-  /* optional: if glow is the main culprit, push it below the header */
+  
   .services-hero-full .hero-glow {
     top: 4rem;
     height: calc(100% - 4rem);
   }
 }
 
-/* Make sure the hero is the stacking context */
+
 .services-hero-full {
   position: relative;
   overflow: hidden;
 }
 
-/* Put effects BEHIND */
+
 .services-hero-full .hero-glow,
 .services-hero-full .hero-fade,
 .services-hero-full::before,
@@ -8995,7 +8995,7 @@ body {
   pointer-events: none;
 }
 
-/* Put your text/content ABOVE */
+
 .services-hero-full .container,
 .services-hero-full .services-hero-content,
 .services-hero-full .services-hero-centered {
@@ -9010,9 +9010,7 @@ body {
   }
 }
 
-/* =====================================================
-   V1 - CENTERED MINIMAL CARD
-   ===================================================== */
+
 
 .no-positions-card {
   text-align: center;
@@ -9063,9 +9061,7 @@ body {
   justify-content: center;
 }
 
-/* =====================================================
-   V2 - SPLIT LAYOUT
-   ===================================================== */
+
 
 .no-positions-split {
   display: grid;
@@ -9169,9 +9165,7 @@ body {
   line-height: 1.6;
 }
 
-/* =====================================================
-   V3 - FULL-WIDTH IMMERSIVE BANNER
-   ===================================================== */
+
 
 .no-positions-banner {
   position: relative;
@@ -9299,9 +9293,7 @@ body {
   color: var(--muted-foreground);
 }
 
-/* =====================================================
-   RESPONSIVE ADJUSTMENTS
-   ===================================================== */
+
 
 @media (max-width: 768px) {
   .no-positions-card {
@@ -9434,17 +9426,17 @@ body {
   padding-bottom: 3rem !important;
 }
 
-/* Reduce vertical spacing for this section */
+
 .contact-hero-v3 {
   padding: 4rem 0 !important;
 }
 
-/* Reduce spacing before offices */
+
 .offices-section-v2 {
   padding: 4rem 0 !important;
 }
 
-/* Remove extra margin between stacked sections */
+
 .hero-contact + .contact-hero-v3 {
   margin-top: 0 !important;
 }
@@ -9453,7 +9445,7 @@ body {
   margin-top: 0 !important;
 }
 
-/* Extra reduction for very wide screens */
+
 @media (min-width: 1440px) {
   .hero-contact {
     padding-bottom: 2rem !important;
@@ -9472,7 +9464,7 @@ body {
   justify-content: center;
 }
 
-/* Reuse clean container style */
+
 .contact-visual .visual-container {
   position: relative;
   width: 100%;
@@ -9481,7 +9473,7 @@ body {
   overflow: hidden;
 }
 
-/* Image styling */
+
 .contact-image {
   width: 100%;
   height: 100%;
@@ -9491,7 +9483,7 @@ body {
   transition: transform 0.6s ease;
 }
 
-/* Subtle premium hover */
+
 .contact-visual:hover .contact-image {
   transform: scale(1.04);
 }
@@ -9503,7 +9495,7 @@ body {
 
 @media (min-width: 1200px) {
   .contact-hero-v3 {
-    min-height: auto;        /* remove full viewport height */
-    padding: 6rem 0 3rem;    /* reduce top & bottom space */
+    min-height: auto;        
+    padding: 6rem 0 3rem;  
   }
 }
