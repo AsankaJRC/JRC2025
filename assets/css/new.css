@@ -491,7 +491,7 @@ font-size: 12px;
 }
 
 .section-alt {
-  background: hsla(0, 0%, 10%, 0.3);
+  background: #0c0c0c;
 }
 
 .section-header {
@@ -804,6 +804,7 @@ font-size: 12px;
 
   
  background: url("../img/about-us-hero.svg") no-repeat center center;
+   background-size: cover;
 
   
   filter: grayscale(100%);
@@ -9503,4 +9504,13 @@ body {
 .leadership-section {
   padding-top: 2.5rem;   /* adjust if you want even tighter */
   padding-bottom: 6rem;  /* keep bottom spacing consistent */
+}
+
+
+
+@media (min-width: 1600px) {
+  .hero-bg {
+    background-size: cover;        /* Keep full width */
+    background-position: center 20%; /* Move image slightly up */
+  }
 }
