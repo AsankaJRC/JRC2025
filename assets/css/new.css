@@ -278,24 +278,70 @@ h1, h2, h3, h4, h5, h6 {
 
 .hero {
   position: relative;
-  
-  
-  justify-content: center;
-  padding-top: 7rem;
-  padding-bottom: 4rem;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 8rem 0 4rem;
   overflow: hidden;
+}
+
+/* Remove the old "push down" behavior */
+.hero > .container {
+  width: 100%;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+/* Keep content above overlays */
+.hero-content {
+  position: relative;
+  z-index: 10;
+}
+
+/* ---------- Responsive (same idea as contact hero media queries) ---------- */
+
+/* Tablet + below */
+@media (max-width: 1024px) {
+  .hero {
+    min-height: auto !important;
+    height: auto !important;
+    padding-top: 6.5rem;
+    padding-bottom: 2rem;
+    display: block !important;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .hero {
+    padding-top: 5.5rem;
+    padding-bottom: 1.5rem;
+  }
+}
+
+/* Ultra-wide tuning (optional but matches your wide-screen approach) */
+@media (min-width: 1440px) {
+  .hero {
+    padding-top: 8rem;
+    padding-bottom: 4rem;
+  }
+}
+
+/* push the logo cloud slightly lower (more separation from hero) */
+.logo-cloud {
+  margin-top: 1.5rem;
 }
 
 .hero-bg {
   position: absolute;
   inset: 0;
   overflow: hidden;
-
-  
   background-image: url("../img/hero.svg");
   background-size: cover;        
   background-position: center;   
   background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 70%; 
 
   
   filter: grayscale(100%) brightness(0.6); 
@@ -313,6 +359,8 @@ h1, h2, h3, h4, h5, h6 {
 
   z-index: 1;
 }
+
+
 
 .hero-shape {
   position: absolute;
@@ -797,20 +845,19 @@ font-size: 12px;
 }
 
 
-.how-we-work-section.has-bg::before {
-  content: "";
-  position: absolute;
-  inset: 0;
+.how-we-work-section.has-bg {
+  position: relative;
+  overflow: hidden;
+  background: url("../img/about-us-hero.svg") no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  transform-style: preserve-3d;
+}
 
-  
- background: url("../img/about-us-hero.svg") no-repeat center center;
-   background-size: cover;
-
-  
-  filter: grayscale(100%);
-  opacity: 1;
-
-  z-index: 0;
+@media (max-width: 991px) {
+  .how-we-work-section.has-bg {
+    background-attachment: scroll;
+  }
 }
 
 
@@ -9514,3 +9561,4 @@ body {
     background-position: center 20%; /* Move image slightly up */
   }
 }
+
