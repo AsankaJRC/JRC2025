@@ -797,20 +797,18 @@ font-size: 12px;
 }
 
 
-.how-we-work-section.has-bg::before {
-  content: "";
-  position: absolute;
-  inset: 0;
+.how-we-work-section.has-bg {
+  position: relative;
+  overflow: hidden;
+  background: url("../img/about-us-hero.svg") no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;   /* 🔥 PARALLAX */
+}
 
-  
- background: url("../img/about-us-hero.svg") no-repeat center center;
-   background-size: cover;
-
-  
-  filter: grayscale(100%);
-  opacity: 1;
-
-  z-index: 0;
+@media (max-width: 991px) {
+  .how-we-work-section.has-bg {
+    background-attachment: scroll;
+  }
 }
 
 
