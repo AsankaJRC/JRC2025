@@ -9563,3 +9563,30 @@ body {
   }
 }
 
+.events-hero-bento {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Prevent any horizontal overflow on ultra-wide screens */
+.events-hero{
+  overflow: hidden;
+  width: 100%;
+  max-width: 100vw;
+}
+
+.events-hero-bento{
+  width: 100%;
+  max-width: 100vw;
+}
+
+html, body{
+  overflow-x: hidden;
+}
+
+@media (min-width: 1600px){
+  .events-hero-bento{
+    background-position: center 35%;
+  }
+}
