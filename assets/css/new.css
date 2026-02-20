@@ -327,6 +327,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+
 /* push the logo cloud slightly lower (more separation from hero) */
 .logo-cloud {
   margin-top: 1.5rem;
@@ -336,7 +337,7 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
   inset: 0;
   overflow: hidden;
-  background-image: url("../img/hero.svg");
+  background-image: url("../img/hero-new.svg");
   background-size: cover;        
   background-position: center;   
   background-repeat: no-repeat;
@@ -850,8 +851,8 @@ font-size: 12px;
   overflow: hidden;
   background: url("../img/about-us-hero.svg") no-repeat center center;
   background-size: cover;
-  background-attachment: fixed;
-  transform-style: preserve-3d;
+  /* background-attachment: fixed;
+  transform-style: preserve-3d; */
 }
 
 @media (max-width: 991px) {
