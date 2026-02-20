@@ -417,7 +417,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .hero-title {
   font-size: clamp(2.5rem, 8vw, 4.8rem);
-  margin-bottom: 1.5rem;
+  margin-bottom: 2.5rem;
   line-height: 1.1;
 }
 
@@ -429,11 +429,19 @@ h1, h2, h3, h4, h5, h6 {
   
 }
 
+.hero-subtitle-one {
+  font-size: 1rem;
+  color: var(--muted-foreground);
+  
+  margin-bottom: 0.5rem;
+  
+}
+
 .hero-sub-title{
   font-size: 1.4rem;
   color: var(--foreground);
   
-  margin-bottom: 2.5rem;
+  margin-bottom: 1rem;
   font-weight: 400;
 }
 
@@ -4041,6 +4049,7 @@ font-size: 12px;
   font-size: 1rem;
   color: var(--muted-foreground);
   line-height: 1.8;
+  margin-bottom: 1rem;
 }
 
 
