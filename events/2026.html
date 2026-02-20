@@ -64,48 +64,40 @@
   </div>
   
   
-<section class="events-hero" style="min-height: 100vh; display: flex; align-items: center; position: relative; overflow: hidden;">
+<section class="events-hero">
   
-  <div class="events-hero-bento" style="position: absolute; inset: 0; display: grid; grid-template-columns: repeat(4, 1fr); grid-template-rows: repeat(3, 1fr); gap: 4px; opacity: 0.8; filter: grayscale(100%) brightness(0.8);">
-    <div style="background: url('../assets/img/events/2024/laya/laya38.jpg') center/cover;"></div>
-    <div style="background: url('../assets/img/events/2025/aurudu/54.jpg') center/cover; grid-column: span 2;"></div>
-    <div style="background: url('../assets/img/events/2024/6th-anniversary/9.jpg') center/cover;"></div>
-    <div style="background: url('../assets/img/events/2024/6th-anniversary/19.jpg') center/cover; grid-row: span 2;"></div>
-    <div style="background: url('../assets/img/events/2023/awurudu/7.jpg') center/cover;"></div>
-    <div style="background: url('../assets/img/events/2023/blood-donation/13.jpg') center/cover;"></div>
-    <div style="background: url('../assets/img/events/2023/fifth-anniversary/4.jpg') center/cover;"></div>
-    <div style="background: url('../assets/img/events/2025/aurudu/01.jpg') center/cover;"></div>
-    <div style="background: url('../assets/img/events/2023/karting/13.jpg') center/cover;"></div>
-    <div style="background: url('../assets/img/events/2023/halloween/23.jpg') center/cover;"></div>
-  </div>
+ <div class="events-hero-bento"
+     style="background-image: url('../assets/img/event-hero-new.svg');">
+</div>
 
-  <div style="position: absolute; inset: 0; background: radial-gradient(ellipse at center, rgba(10,10,10,0.7) 20%, rgba(10,10,10,0.95) 100%);"></div>
+  <div class="events-hero-overlay"></div>
 
-  <div class="container events-hero-container" style="position: relative; z-index: 10;">
-    <div class="events-hero-content" style="margin: 0 auto; text-align: center;">
-      <span class="badge events-hero-badge" style="margin-bottom: 2rem;">Events & Culture</span>
+  <div class="container events-hero-content">
+    <div class="events-hero-inner">
+      <span class="badge events-hero-badge">Events & Culture</span>
 
-      <h1 class="events-hero-title" style="font-size: clamp(3rem, 8vw, 5rem); font-weight: 800; line-height: 1; margin-bottom: 2rem;">
-        <span style="display: block; background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Moments</span>
-        <span style="display: block; color: white;">That matter</span>
+      <h1 class="events-hero-title">
+        <span class="grad-text">Moments</span>
+        <span class="plain-text">That matter</span>
       </h1>
 
-      <p class="events-hero-subtitle" style="font-size: 1rem; color: #a3a3a3; max-width: 600px; margin: 0 auto 3rem;">
-        Experience the vibrant culture at JRC Software , where every event is an opportunity to connect, celebrate, and create lasting memories.
+      <p class="events-hero-desc">
+        Experience the vibrant culture at JRC Software, where every event is an opportunity to connect,
+        celebrate, and create lasting memories.
       </p>
 
-      <div class="events-hero-stats" style="display: flex; justify-content: center; gap: 4rem;">
-        <div style="text-align: center;">
-          <div style="font-size: 3rem; font-weight: 800; background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">50+</div>
-          <div style="color: #737373; font-size: 0.875rem; letter-spacing: 0.1em;">Events</div>
+      <div class="events-hero-stats">
+        <div class="stat">
+          <div class="stat-num grad-text">50+</div>
+          <div class="stat-label">Events</div>
         </div>
-        <div style="text-align: center;">
-          <div style="font-size: 3rem; font-weight: 800; background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">100+</div>
-          <div style="color: #737373; font-size: 0.875rem; letter-spacing: 0.1em;">Team</div>
+        <div class="stat">
+          <div class="stat-num grad-text">100+</div>
+          <div class="stat-label">Team</div>
         </div>
-        <div style="text-align: center;">
-          <div style="font-size: 3rem; font-weight: 800; background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">∞</div>
-          <div style="color: #737373; font-size: 0.875rem; letter-spacing: 0.1em;">Memories</div>
+        <div class="stat">
+          <div class="stat-num grad-text">∞</div>
+          <div class="stat-label">Memories</div>
         </div>
       </div>
     </div>
