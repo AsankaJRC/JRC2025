@@ -9599,3 +9599,72 @@ html, body{
     background-position: center 35%;
   }
 }
+
+.contact-hero-v3{
+  position: relative;
+  overflow: hidden;
+}
+
+/* Glow sits above background, below overlay + content */
+.contact-hero-v3 .hero-glow{
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Overlay above glow */
+.contact-hero-v3 .hero-overlay{
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+/* Content above everything */
+.contact-hero-v3 .container{
+  position: relative;
+  z-index: 2;
+}
+
+.contact-hero-v3 {
+  position: relative;
+  overflow: hidden;
+}
+
+/* New contact-only glow */
+.contact-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 700px;           /* controlled size */
+  height: 700px;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(
+    circle,
+    hsla(24, 100%, 55%, 0.18) 0%,
+    hsla(24, 100%, 50%, 0.12) 30%,
+    transparent 100%
+  );
+  filter: blur(60px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Make sure layering is correct */
+.contact-hero-v3 .hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.contact-hero-v3 .container {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-contact{ position: relative; overflow: hidden; }
+.hero-contact-bg{ z-index: 0; }
+.hero-contact-glow{ z-index: 1; }
+.hero-contact-bg::after{ z-index: 2; }  /* your dark gradient overlay */
+.hero-contact-content{ position: relative; z-index: 10; }
+
