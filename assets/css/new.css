@@ -337,7 +337,7 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
   inset: 0;
   overflow: hidden;
-  background-image: url("../img/hero-new.svg");
+  background-image: url("../img/home-hero.svg");
   background-size: cover;        
   background-position: center;   
   background-repeat: no-repeat;
