@@ -590,9 +590,10 @@ font-size: 12px;
 
 .quote-intro {
   font-size: 1rem;
-  font-style: italic;
+  /* font-style: italic; */
   color: hsla(0, 0%, 98%, 0.9);
   margin-bottom: 0.5rem;
+  text-align: center;
 }
 
 .quote-text {
@@ -600,6 +601,7 @@ font-size: 12px;
   font-size: 1.5rem;
   font-weight: 700;
   color: var(--foreground);
+  text-align: center;
 }
 
 .about-visual {
@@ -835,7 +837,7 @@ font-size: 12px;
 
 @media (min-width: 1024px) {
   .services-grid {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -2226,7 +2228,7 @@ font-size: 12px;
 }
 
 .section-header-center h2 {
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: 600;
   margin-top: 1rem;
 }
@@ -7166,7 +7168,7 @@ font-size: 12px;
 }
 
 .section-header-center h2 {
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: 600;
   margin-top: 1rem;
 }
