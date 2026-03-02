@@ -491,11 +491,22 @@ font-size: 12px;
 
 .logo-cloud-track {
   display: flex;
+  width: max-content;
+  animation: logoScroll 35s linear infinite;
+  will-change: transform;
+  transform: translate3d(0,0,0);
+}
+
+.logo-cloud-group {
+  display: flex;
   align-items: center;
   gap: 4rem;
-  width: max-content;
-  animation: logoScroll 30s linear infinite;
-  will-change: transform;
+  padding-right: 4rem; /* keeps spacing consistent at the seam */
+}
+
+@keyframes logoScroll {
+  0%   { transform: translate3d(0,0,0); }
+  100% { transform: translate3d(-50%,0,0); }
 }
 
 .logo-cloud-track-wrapper:hover .logo-cloud-track {
