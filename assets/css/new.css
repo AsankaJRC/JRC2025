@@ -483,13 +483,75 @@ font-size: 12px;
 }
 
 
-.logo-cloud-items {
+.logo-cloud-track-wrapper {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.logo-cloud-track {
   display: flex;
   align-items: center;
-  justify-content: space-between; 
-  gap: 2rem; 
-  flex-wrap: nowrap; 
-  width: 100%;
+  gap: 4rem;
+  width: max-content;
+  animation: logoScroll 30s linear infinite;
+  will-change: transform;
+}
+
+.logo-cloud-track-wrapper:hover .logo-cloud-track {
+  animation-play-state: paused;
+}
+
+.logo-cloud-item {
+  flex: 0 0 auto;
+  opacity: 0.35;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  cursor: default;
+}
+
+.logo-cloud-item img {
+  height: 60px;
+  width: auto;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.logo-cloud-item:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+.logo-cloud-item:hover img {
+  filter: grayscale(0%);
+}
+
+@keyframes logoScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.logo-cloud-track-wrapper::before,
+.logo-cloud-track-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100px;
+  height: 100%;
+  z-index: 2;
+}
+
+.logo-cloud-track-wrapper::before {
+  left: 0;
+  background: linear-gradient(to right, var(--background), transparent);
+}
+
+.logo-cloud-track-wrapper::after {
+  right: 0;
+  background: linear-gradient(to left, var(--background), transparent);
 }
 
 
@@ -6077,6 +6139,7 @@ font-size: 12px;
       overflow: hidden;
       background: var(--bg-card);
       border: 1px solid var(--border-color);
+      cursor: default;
     }
     
     .bento-item img {
