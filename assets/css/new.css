@@ -8100,6 +8100,7 @@ font-size: 12px;
 .contact-value {
   font-size: 0.9375rem;
   color: var(--text-secondary);
+  text-decoration: none !important;
 }
 
 
