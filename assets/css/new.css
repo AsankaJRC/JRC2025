@@ -9763,8 +9763,3 @@ html, body{
   z-index: 10 !important;    
   background: var(--background);
 }
-
-
-body{
-  padding-top: 4rem;
-}
