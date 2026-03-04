@@ -935,8 +935,8 @@ font-size: 12px;
   overflow: hidden;
   background: url("../img/about-us-hero.png") no-repeat center center;
   background-size: cover;
-  /* background-attachment: fixed;
-  transform-style: preserve-3d; */
+  background-attachment: fixed;
+  transform-style: preserve-3d;
 }
 
 @media (max-width: 991px) {
