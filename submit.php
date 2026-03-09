@@ -1,34 +1,65 @@
 <?php
 
-if ($_SERVER["REQUEST_METHOD"] !== "POST") {
+declare(strict_types=1);
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+require __DIR__ . '/vendor/autoload.php';
+
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     http_response_code(405);
-    exit("Method not allowed");
+    exit('Method not allowed');
 }
 
-$name = trim($_POST["name"] ?? "");
-$email = trim($_POST["email"] ?? "");
-$message = trim($_POST["message"] ?? "");
+$name = trim($_POST['name'] ?? '');
+$email = trim($_POST['email'] ?? '');
+$message = trim($_POST['message'] ?? '');
 
-// Basic validation
-if ($name === "" || $email === "" || $message === "") {
-    exit("All fields are required.");
+if (!$name || !$email || !$message) {
+    exit('All fields are required.');
 }
 
 if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    exit("Invalid email address.");
+    exit('Invalid email address.');
 }
 
-// Sanitise
-$safeName = htmlspecialchars($name, ENT_QUOTES, "UTF-8");
-$safeMessage = htmlspecialchars($message, ENT_QUOTES, "UTF-8");
+$mail = new PHPMailer(true);
 
-// Email example
-$to = "asanka@jrcsoftware.com";
-$subject = "New contact form submission";
-$body = "Name: $safeName\nEmail: $email\n\nMessage:\n$safeMessage";
-$headers = "From: contact@jrcsoftware.com\r\nReply-To: $email";
+try {
 
-mail($to, $subject, $body, $headers);
+    // SMTP configuration
+    $mail->isSMTP();
+    $mail->Host       = 'smtp.gmail.com'; 
+    $mail->SMTPAuth   = true;
+    $mail->Username   = 'yourgmail@gmail.com';
+    $mail->Password   = 'your-app-password';
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+    $mail->Port       = 587;
 
-// Success response
-echo "Thanks. Your message has been sent.";
+    // Sender
+    $mail->setFrom('contact@jrcsoftware.com', 'Website Contact');
+    $mail->addAddress('asanka@jrcsoftware.com');
+
+    // Reply to visitor
+    $mail->addReplyTo($email, $name);
+
+    // Content
+    $mail->isHTML(false);
+    $mail->Subject = 'New Contact Form Submission';
+
+    $mail->Body = 
+"Name: $name
+Email: $email
+
+Message:
+$message";
+
+    $mail->send();
+
+    echo "Message sent successfully.";
+
+} catch (Exception $e) {
+    http_response_code(500);
+    echo "Mailer Error: {$mail->ErrorInfo}";
+}
